@@ -32,6 +32,15 @@ const securityHeaders = [
 ];
 
 const nextConfig = {
+    images: {
+        remotePatterns: [
+            {
+                protocol: 'http',
+                hostname: 'localhost',
+                port: '1345',
+            },
+        ],
+    },
     distDir: 'build',
     reactStrictMode: false,
     experimental: {

@@ -1,7 +1,7 @@
-import {useEffect, useRef, useState} from "react";
-import {fetchData} from "../../HELPERS/fetchdata";
+import { useEffect, useRef, useState } from "react";
+import { fetchData } from "../../HELPERS/fetchdata";
 import Link from "next/link";
-import {useRouter} from "next/router";
+import { useRouter } from "next/router";
 import Image from "next/image";
 
 export default function Navbar({
@@ -49,7 +49,7 @@ export default function Navbar({
                 <Link
                     href={{
                         pathname: "/my_account",
-                        query: {page: "bookings"},
+                        query: { page: "bookings" },
                     }}
                 >
                     <div
@@ -64,7 +64,7 @@ export default function Navbar({
                 <Link
                     href={{
                         pathname: "/my_account",
-                        query: {page: "personal_details"},
+                        query: { page: "personal_details" },
                     }}
                 >
                     <div
@@ -79,7 +79,7 @@ export default function Navbar({
                 <Link
                     href={{
                         pathname: "/my_account",
-                        query: {page: "payments"},
+                        query: { page: "payments" },
                     }}
                 >
                     <div
@@ -224,6 +224,25 @@ export default function Navbar({
                         </div>
                     );
                 })}
+                <div
+                    className={
+                        clickedlink === 'Blog'
+                            ? "navbarroute-clicked"
+                            : "navbarroute"
+                    }
+                    key={'blog'}
+                    onClick={() => {
+                        signwindow(false);
+                        // if (router.pathname !== "/") {
+                        //     router.push("/blog");
+                        // }
+                        // scrollintoview(r);
+                        setclickedlink("Blog");
+                    }}
+                >
+                    <Link href={'/blog'}>{'Blog'}</Link>
+                </div>
+
             </nav>
         );
     }
@@ -313,8 +332,8 @@ export default function Navbar({
             {router.pathname == "/booking"
                 ? bookingLiner()
                 : screenwidth <= 1200
-                ? null
-                : navbarroutes()}
+                    ? null
+                    : navbarroutes()}
 
             <Phoneandsignbutton />
         </section>
