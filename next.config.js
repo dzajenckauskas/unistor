@@ -32,6 +32,7 @@ const securityHeaders = [
 ];
 
 const nextConfig = {
+    distDir: 'build',
     reactStrictMode: false,
     experimental: {
         appDir: false,
@@ -39,7 +40,7 @@ const nextConfig = {
         fontLoaders: [
             {
                 loader: "@next/font/google",
-                options: {subsets: ["latin"]},
+                options: { subsets: ["latin"] },
             },
         ],
     },
