@@ -1,49 +1,49 @@
-import {hashPassword} from "../../BACKEND/bcrypt";
-import {findOneDocument, updateById} from "../../BACKEND/mongo";
-import {sendEmail} from "../../HELPERS/nodemailer";
+import { hashPassword } from "../../BACKEND/bcrypt";
+import { findOneDocument, updateById } from "../../BACKEND/mongo";
+import { sendEmail } from "../../HELPERS/nodemailer";
 
 export default async function name(req, res) {
-    if (!req.body) {
-        res.json(false);
-    } else {
-        switch (req.body.type) {
-            case "sendRecovery":
-                {
-                    let f = await findOneDocument("users", {
-                        "personalDetails.email": req.body.email,
-                    });
-                    if (!f) {
-                        res.json({
-                            status: false,
-                            msg: "email not found",
-                        });
-                    } else {
-                        const Cryptr = require("cryptr");
-                        const cryptr = new Cryptr(
-                            process.env.cryptokey
-                        );
+   if (!req.body) {
+      res.json(false);
+   } else {
+      switch (req.body.type) {
+         case "sendRecovery":
+            {
+               let f = await findOneDocument("users", {
+                  "personalDetails.email": req.body.email,
+               });
+               if (!f) {
+                  res.json({
+                     status: false,
+                     msg: "email not found",
+                  });
+               } else {
+                  const Cryptr = require("cryptr");
+                  const cryptr = new Cryptr(
+                     process.env.cryptokey
+                  );
 
-                        const encryptedString = cryptr.encrypt(
-                            req.body.uniqueid
-                        );
+                  const encryptedString = cryptr.encrypt(
+                     req.body.uniqueid
+                  );
 
-                        let u = await updateById("users", f._id, {
-                            recovery: {
-                                date: Date.now(),
-                                key: req.body.uniqueid,
-                            },
-                        });
+                  let u = await updateById("users", f._id, {
+                     recovery: {
+                        date: Date.now(),
+                        key: req.body.uniqueid,
+                     },
+                  });
 
-                        if (u.modifiedCount !== 0) {
-                            let url;
+                  if (u.modifiedCount !== 0) {
+                     let url;
 
-                            if (process.env.production) {
-                                url = `https://unistor.co.uk/password_recovery/${encryptedString}`;
-                            } else {
-                                url = `http://localhost:3000/password_recovery/${encryptedString}`;
-                            }
+                     if (process.env.production) {
+                        url = `https://unistor.co.uk/password_recovery/${encryptedString}`;
+                     } else {
+                        url = `http://localhost:3000/password_recovery/${encryptedString}`;
+                     }
 
-                            let html = `<!DOCTYPE html>
+                     let html = `<!DOCTYPE html>
                      <html xmlns="http://www.w3.org/1999/xhtml">
                         <head>
                            <meta charset="UTF-8" />
@@ -83,6 +83,7 @@ export default async function name(req, res) {
                                                       <a
                                                          rel="nofollow noopener noreferrer"
                                                          target="_blank"
+                                                         rel="noreferrer"
                                                          href="https://www.unistor.co.uk"
                                                          style="text-decoration: none">
                                                          <img
@@ -188,6 +189,7 @@ export default async function name(req, res) {
                                                                      <a
                                                                         rel="nofollow noopener noreferrer"
                                                                         target="_blank"
+                                                                        rel="noreferrer"
                                                                         href="${url}"
                                                                         style="
                                                                            background: #d80b65;
@@ -272,55 +274,55 @@ export default async function name(req, res) {
                      </html>
                      `;
 
-                            let s = await sendEmail(
-                                [`${f.personalDetails.email}`],
-                                "password-recovery",
-                                "",
-                                html,
-                                false
-                            );
+                     let s = await sendEmail(
+                        [`${f.personalDetails.email}`],
+                        "password-recovery",
+                        "",
+                        html,
+                        false
+                     );
 
-                            if (!s) {
-                                res.json({
-                                    status: false,
-                                    msg: "something went wrong",
-                                });
-                            } else {
-                                res.json({
-                                    status: true,
-                                });
-                            }
-                        } else {
-                            res.json({
-                                status: false,
-                                msg: "something went wrong",
-                            });
-                        }
-                    }
-                }
+                     if (!s) {
+                        res.json({
+                           status: false,
+                           msg: "something went wrong",
+                        });
+                     } else {
+                        res.json({
+                           status: true,
+                        });
+                     }
+                  } else {
+                     res.json({
+                        status: false,
+                        msg: "something went wrong",
+                     });
+                  }
+               }
+            }
 
-                break;
-            case "changePassword":
-                {
-                    let hash = await hashPassword(req.body.newpass);
+            break;
+         case "changePassword":
+            {
+               let hash = await hashPassword(req.body.newpass);
 
-                    let u = await updateById("users", req.body.id, {
-                        password: hash,
-                        recovery: new Date(Date.now()).toDateString(
-                            "gb-GB"
-                        ),
-                    });
+               let u = await updateById("users", req.body.id, {
+                  password: hash,
+                  recovery: new Date(Date.now()).toDateString(
+                     "gb-GB"
+                  ),
+               });
 
-                    if (u.modifiedCount !== 0) {
-                        res.json(true);
-                    } else {
-                        res.json(false);
-                    }
-                }
-                break;
+               if (u.modifiedCount !== 0) {
+                  res.json(true);
+               } else {
+                  res.json(false);
+               }
+            }
+            break;
 
-            default:
-                break;
-        }
-    }
+         default:
+            break;
+      }
+   }
 }

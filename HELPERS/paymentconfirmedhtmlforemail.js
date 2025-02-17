@@ -1,7 +1,7 @@
-import {getStoragePrice} from "../COMPONENTS/order-edit/order-edit-helper-funtions";
+import { getStoragePrice } from "../COMPONENTS/order-edit/order-edit-helper-funtions";
 
 export function paymentConfirmedHTMLForEmail(req) {
-    return `<!DOCTYPE html>
+   return `<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
    <head>
       <meta charset="UTF-8" />
@@ -41,6 +41,7 @@ export function paymentConfirmedHTMLForEmail(req) {
                                  <a
                                     rel="nofollow noopener noreferrer"
                                     target="_blank"
+                                    rel="noreferrer"
                                     href="https://www.unistor.co.uk"
                                     style="text-decoration: none">
                                     <img
@@ -115,13 +116,11 @@ export function paymentConfirmedHTMLForEmail(req) {
                                                    margin-bottom: 56px;
                                                 ">
                                               <strong
-                                              >Hi, ${
-                                                  req.body.state
-                                                      .address
-                                                      .firstName
-                                              } ${
-        req.body.state.address.lastName
-    }!</strong
+                                              >Hi, ${req.body.state
+         .address
+         .firstName
+      } ${req.body.state.address.lastName
+      }!</strong
                                              </p>
 
                                           <p        style="
@@ -158,8 +157,8 @@ export function paymentConfirmedHTMLForEmail(req) {
                                           text-align: left;
                                           margin-bottom: 24px;
                                        ">Price per month: <strong>£${getStoragePrice(
-                                           req.body
-                                       )}</strong></p>
+         req.body
+      )}</strong></p>
                                        <p   style="
                                        font-size: 16px;
                                        color: #594a43;
@@ -181,10 +180,9 @@ export function paymentConfirmedHTMLForEmail(req) {
                                           sans-serif;
                                        text-align: left;
                                        margin-bottom: 24px;
-                                    "   > <strong>Your empty box delivery date:</strong> ${
-                                        req.body.state.materials
-                                            .packingMaterialsDelivery
-                                    } (Please note: Delivery time will be in between 08:00 – 18:00) </p>
+                                    "   > <strong>Your empty box delivery date:</strong> ${req.body.state.materials
+         .packingMaterialsDelivery
+      } (Please note: Delivery time will be in between 08:00 – 18:00) </p>
                                        <p   style="
                                        font-size: 16px;
                                        color: #594a43;
@@ -195,9 +193,8 @@ export function paymentConfirmedHTMLForEmail(req) {
                                           sans-serif;
                                        text-align: left;
                                        margin-bottom: 24px;
-                                    "   > <strong>Your collection of packed items date:</strong>${
-                                        req.body.state.date.pickUpDate
-                                    }
+                                    "   > <strong>Your collection of packed items date:</strong>${req.body.state.date.pickUpDate
+      }
     <ol style="
     font-size: 16px;
     color: #594a43;

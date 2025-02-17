@@ -1,4 +1,4 @@
-import {itemsofstorageandmats} from "./variousVariables";
+import { itemsofstorageandmats } from "./variousVariables";
 
 export function emailFterBookingToUnistor(order) {
     function packingMats() {
@@ -18,9 +18,8 @@ export function emailFterBookingToUnistor(order) {
     text-align: left;
     "
                         >
-                            ${order.state.materials[mat.pos]} X ${
-                        mat.name
-                    }
+                            ${order.state.materials[mat.pos]} X ${mat.name
+                        }
                         </p>`;
                     if (elm) {
                         arr.push(elm);
@@ -44,10 +43,9 @@ text-align: left;
 "
                 >
                     <strong>BOX DELIVERY:</strong>
-                    ${
-                        order?.state?.materials
-                            ?.packingMaterialsDelivery
-                    }
+                    ${order?.state?.materials
+                ?.packingMaterialsDelivery
+            }
                 </p>
                 <p
                     style="
@@ -103,9 +101,8 @@ margin-bottom: 8px;
     text-align: left;
     "
                         >
-                            ${order.state.storage[st.pos]} X ${
-                        st.name
-                    }
+                            ${order.state.storage[st.pos]} X ${st.name
+                        }
                         </p>`;
                     if (elm) {
                         arr.push(elm);
@@ -144,9 +141,8 @@ margin-bottom: 8px;
 "
                 >
                     <strong>NAME:</strong>
-                    ${order?.state?.address?.firstName} ${
-            order?.state?.address?.lastName
-        }
+                    ${order?.state?.address?.firstName} ${order?.state?.address?.lastName
+            }
                 </p>
                 <p
                     style="
@@ -228,6 +224,7 @@ margin-bottom: 8px;
                                                     <a
                                                         rel="nofollow noopener noreferrer"
                                                         target="_blank"
+                                                        rel="noreferrer"
                                                         href="https://www.unistor.co.uk"
                                                         style="
                                                         text-decoration: none;
@@ -318,14 +315,13 @@ margin-bottom: 8px;
                                                                             BELOW,
                                                                         </strong>
                                                                     </p>
-                                                                    ${
-                                                                        order
-                                                                            ?.state
-                                                                            ?.materials
-                                                                            ?.packingMaterials
-                                                                            ? packingMats()
-                                                                            : null
-                                                                    }
+                                                                    ${order
+            ?.state
+            ?.materials
+            ?.packingMaterials
+            ? packingMats()
+            : null
+        }
                                                        
                                                                     ${storageOfItems()}
                                                                     <a
@@ -407,9 +403,8 @@ export function emailAfterFinalPaymentToUnistor(order) {
     text-align: left;
     "
                         >
-                            ${order.state.storage[st.pos]} X ${
-                        st.name
-                    }
+                            ${order.state.storage[st.pos]} X ${st.name
+                        }
                         </p>`;
                     if (elm) {
                         arr.push(elm);
@@ -470,9 +465,8 @@ export function emailAfterFinalPaymentToUnistor(order) {
 "
                 >
                     <strong>NAME:</strong>
-                    ${order?.state?.address?.firstName} ${
-            order?.state?.address?.lastName
-        }
+                    ${order?.state?.address?.firstName} ${order?.state?.address?.lastName
+            }
                 </p>
                 <p
                     style="
@@ -554,6 +548,7 @@ export function emailAfterFinalPaymentToUnistor(order) {
                                                     <a
                                                         rel="nofollow noopener noreferrer"
                                                         target="_blank"
+                                                        rel="noreferrer"
                                                         href="https://www.unistor.co.uk"
                                                         style="
                                                         text-decoration: none;
@@ -717,9 +712,8 @@ export function emailOnPickUpDateChangeToUnistor(order) {
     text-align: left;
     "
                         >
-                            ${order.state.storage[st.pos]} X ${
-                        st.name
-                    }
+                            ${order.state.storage[st.pos]} X ${st.name
+                        }
                         </p>`;
                     if (elm) {
                         arr.push(elm);
@@ -780,9 +774,8 @@ export function emailOnPickUpDateChangeToUnistor(order) {
 "
                 >
                     <strong>NAME:</strong>
-                    ${order?.state?.address?.firstName} ${
-            order?.state?.address?.lastName
-        }
+                    ${order?.state?.address?.firstName} ${order?.state?.address?.lastName
+            }
                 </p>
                 <p
                     style="
@@ -864,6 +857,7 @@ export function emailOnPickUpDateChangeToUnistor(order) {
                                                     <a
                                                         rel="nofollow noopener noreferrer"
                                                         target="_blank"
+                                                        rel="noreferrer"
                                                         href="https://www.unistor.co.uk"
                                                         style="
                                                         text-decoration: none;
@@ -943,12 +937,11 @@ export function emailOnPickUpDateChangeToUnistor(order) {
                                                                     "
                                                                     >
                                                                         <strong>
-                                                                      CUSTOMER JUST CHANGED THEIR COLLECTION DATE TO ${
-                                                                          order
-                                                                              .state
-                                                                              .date
-                                                                              .pickUpDate
-                                                                      }
+                                                                      CUSTOMER JUST CHANGED THEIR COLLECTION DATE TO ${order
+            .state
+            .date
+            .pickUpDate
+        }
                                                                         </strong>
                                                                     </p>
                                                        
@@ -1132,6 +1125,7 @@ overflow-wrap:break-word;
                                                     <a
                                                         rel="nofollow noopener noreferrer"
                                                         target="_blank"
+                                                        rel="noreferrer"
                                                         href="https://www.unistor.co.uk"
                                                         style="
                                                         text-decoration: none;

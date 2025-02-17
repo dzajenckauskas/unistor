@@ -1,10 +1,10 @@
-export default function Privacy({setshowterms}) {
+export default function Privacy({ setshowterms }) {
     return (
         <div className="termswrapper">
             <div className="termswrpclosewrp">
                 <p>
                     {" "}
-                    <strong style={{fontSize: "1.25rem"}}>
+                    <strong style={{ fontSize: "1.25rem" }}>
                         DATA PRIVACY, PROTECTION AND COOKIES POLICY
                     </strong>{" "}
                 </p>
@@ -220,7 +220,7 @@ export default function Privacy({setshowterms}) {
                         use of cookies you may not be able to use the
                         full functionality of this site.
                         <span className="br"></span>
-                        <span style={{textDecoration: "underline"}}>
+                        <span style={{ textDecoration: "underline" }}>
                             We currently use the following cookies:
                         </span>
                         <span className="br"></span>
@@ -238,6 +238,7 @@ export default function Privacy({setshowterms}) {
                             }}
                             href="https://stripe.com/en-lt/cookie-settings"
                             target="_blank"
+                            rel="noreferrer"
                         >
                             Check Stripe cookies here
                         </a>

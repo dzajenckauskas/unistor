@@ -38,6 +38,7 @@
         "glob-parent": "6.0.2"
     },
     "devDependencies": {
+        "@types/react": "19.0.10",
         "file-loader": "^6.2.0"
     }
 }
