@@ -1,0 +1,1438 @@
+body {
+    line-height: 1;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+h2 {
+    font-size: 3rem;
+    font-weight: 900;
+}
+h3 {
+    font-size: 1.75rem;
+    font-weight: 900;
+}
+h4 {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+ul {
+    list-style: none;
+}
+p {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+abbr {
+    text-decoration: none;
+}
+input {
+    font-size: 16px;
+    font-weight: 500;
+}
+input::placeholder {
+    font-family: inherit;
+    font-size: 0.9rem;
+}
+
+button {
+    font-family: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+textarea {
+    padding: 16px;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.3;
+}
+.bookingglobalwrapper {
+    display: flex;
+    padding-top: 88px;
+}
+.indexglobalwrapper {
+    padding-top: 88px;
+}
+.navbarroute {
+    cursor: pointer;
+}
+.navbarroute-clicked {
+    cursor: pointer;
+
+    color: #d80b65;
+}
+
+.__className_258d1f {
+    position: relative;
+}
+
+.navbarglobalwrp {
+    height: 88px;
+    width: 100%;
+    box-shadow: 0px 8px 16px 8px rgba(0, 0, 0, 0.13);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 24px;
+    padding-right: 24px;
+    position: fixed;
+    top: 0;
+    background: white;
+    z-index: 10;
+}
+.navbarlogo {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+.navbarunistortxt {
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 1;
+}
+.navbarrouteswrapper {
+    display: flex;
+    gap: 24px;
+    font-weight: 600;
+}
+.navbarphoneandsignbuttonwrapper {
+    display: flex;
+    gap: 8px;
+}
+.navbarlogobottomtxt {
+    line-height: 1;
+    color: #d80b65;
+    font-size: 0.75rem;
+    font-weight: 800;
+    margin-top: -4px;
+}
+.centerwrptext p {
+    font-size: 1.25rem;
+    line-height: 2;
+}
+.welcomebackokbutton {
+    width: 302px;
+    height: 56px;
+    background: #43184d;
+    color: white;
+    margin-top: 32px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.navbarphonebutton {
+    height: 40px;
+    padding-left: 32px;
+    padding-right: 32px;
+    background: none;
+    outline: none;
+    border-top: 2px solid #d80b65;
+    border-left: 2px solid #d80b65;
+    border-bottom: 1px solid #d80b65;
+    border-right: 1px solid #d80b65;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #d80b65;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbarsigninbutton,
+.navbarsigninbuttonlogged {
+    background: #d80b65;
+    color: white;
+    font-weight: 600;
+    border-top: 2px solid #d80b65;
+    border-left: 2px solid #d80b65;
+    border-bottom: 1px solid #d80b65;
+    border-right: 1px solid #d80b65;
+    text-transform: uppercase;
+    height: 40px;
+    padding-left: 32px;
+    padding-right: 32px;
+    cursor: pointer;
+}
+.navbarsigninbuttonlogged {
+    width: 100%;
+}
+.navbarlogocube {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    background: #d80b65;
+    animation-name: rotatecube;
+    animation-duration: 8000ms;
+    animation-iteration-count: infinite;
+    transition-timing-function: linear;
+    animation-delay: 400ms;
+}
+.navbarlogocubewrapper {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(45deg);
+    transform-origin: center center;
+    left: 67px;
+    top: -8px;
+}
+.navbarmobilemenubutton {
+    display: none;
+    background: #562462;
+    z-index: 10;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.navbarmovilebuttonlineswrp {
+    width: 48px;
+    height: 48px;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    align-items: center;
+}
+
+.navbarmobilebuttonline {
+    width: 32px;
+    height: 2px;
+    background: white;
+}
+
+@keyframes rotatecube {
+    0% {
+        transform: rotate(0deg);
+    }
+    8.33%,
+    25% {
+        transform: rotate(90deg);
+    }
+    33.33%,
+    50% {
+        transform: rotate(180deg);
+    }
+    58.33%,
+    75% {
+        transform: rotate(270deg);
+    }
+    83.33%,
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.navbarlogopointhider {
+    position: absolute;
+    left: 65.5px;
+    top: -6px;
+    width: 20px;
+    height: 20px;
+    background: white;
+}
+.heroareaglobalwrapper {
+    height: 616px;
+    background: #efefef;
+}
+.heroarealeftwrp {
+    display: flex;
+    flex-direction: column;
+    width: 504px;
+    justify-self: center;
+}
+.heroarealefttop {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    align-items: center;
+    letter-spacing: -2px;
+}
+.herosecondline {
+    display: flex;
+}
+.heroeasierword {
+    color: #d80b65;
+    font-size: 5rem;
+    transform: translate(8px, -8px);
+    display: block;
+}
+.heroarealeftmiddle {
+    font-weight: 600;
+    margin-top: 16px;
+    margin-bottom: 26px;
+    line-height: 1.3;
+    width: 392px;
+}
+.heroareaatoptxt {
+    display: flex;
+    align-items: center;
+    margin-bottom: -16px;
+}
+.heroarealefttop {
+    font-weight: 900;
+}
+.heroareaestorageword {
+    padding: 8px 16px 8px 16px;
+    border: 2px dashed black;
+    border-radius: 8px;
+    margin-left: 16px;
+}
+
+.lesthantwominutescolored {
+    color: #d80b65;
+    font-weight: 800;
+    text-shadow: 0px 0px black;
+}
+
+.heroarealeftbottom {
+    display: flex;
+    outline: 2px solid #d80b65;
+    gap: 32px;
+    align-items: center;
+    padding: 8px;
+    width: fit-content;
+    background: white;
+}
+
+.heroareacenterwrp {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+    align-items: center;
+    overflow: hidden;
+}
+
+.heroarearightwrp {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    margin-top: auto;
+    margin-right: -10vw;
+}
+
+.heroimage {
+    height: 536px;
+    width: 1147px;
+}
+.getquoteorengebutton {
+    background: #d80b65;
+
+    height: 64px;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    padding-left: 32px;
+    padding-right: 32px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.postcodeinput {
+    outline: none;
+    border: none;
+    text-align: center;
+    font-size: 1rem;
+
+    width: 160px;
+    height: 100%;
+}
+
+.linebarafterherowrp {
+    width: 100%;
+    height: 88px;
+    background: #43184d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lbafterheroinsidewrp {
+    width: 1235px;
+    display: flex;
+
+    justify-content: space-around;
+    align-items: center;
+}
+.lbafterheroeml {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+}
+.linertxt {
+    color: white;
+    font-weight: 500;
+    max-width: 232px;
+    line-height: 1.3;
+    padding: 0;
+    margin: 0;
+}
+.lbafterherostrongertxt {
+    color: #d80b65;
+    font-weight: 700;
+}
+
+.howitworksareawrapper {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    width: 100%;
+    background: #562462;
+    display: flex;
+    justify-content: center;
+}
+
+.studentstorageareawrp {
+    width: 1136px;
+    padding-top: 120px;
+
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.studentsstoragerightimgwrp {
+    position: relative;
+    width: 576px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.sstoragediamond {
+    width: 16px;
+    height: 16px;
+    background: #d80b65;
+    transform: rotate(45deg);
+    margin-bottom: 40px;
+}
+.studentstorageleftwrp {
+    width: 424px;
+}
+.sstrgtxt {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.3;
+    margin-bottom: 40px;
+}
+.sstgimg {
+    width: 100%;
+    height: fit-content;
+}
+.sstoragetitle {
+    margin-bottom: 40px;
+}
+.pfareatxt {
+    line-height: 1.3;
+    color: white;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.howitworkstitle {
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    color: white;
+}
+
+.pfareagetquotebutton {
+    background: #562462;
+    border: none;
+    height: 64px;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    padding-left: 32px;
+    padding-right: 32px;
+    text-transform: uppercase;
+    cursor: pointer;
+    align-self: flex-start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.getquotemdfkwrp {
+    width: fit-content;
+}
+
+.professionalpackingareawrp {
+    background: #f26122;
+    width: 100%;
+    padding-top: 120px;
+    display: flex;
+    justify-content: center;
+}
+.profarealeftimg {
+    width: 464px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-shrink: 0;
+}
+.pfaimg {
+    width: 100%;
+    height: fit-content;
+}
+.pfareatitle {
+    color: white;
+}
+.pfareadiamond {
+    width: 16px;
+    height: 16px;
+    background: #562462;
+    transform: rotate(45deg);
+}
+.pfarigttwrp {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-bottom: 120px;
+    width: 456px;
+}
+.profareacenterwrp {
+    width: 1136px;
+    display: flex;
+    justify-content: space-between;
+}
+.customersexperienceareawrp {
+    padding-top: 120px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 120px;
+}
+.diamond {
+    width: 16px;
+    height: 16px;
+    background: #d80b65;
+    transform-origin: center center;
+    transform: rotate(45deg);
+    margin-bottom: 48px;
+}
+.customersrevtitle {
+    margin-bottom: 56px;
+    text-align: center;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.customersexpstarswrapper {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+    justify-content: center;
+}
+.customersexpcenterwrp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.customersexpreviewswrp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1116px;
+}
+.customersexpstar {
+    width: 16px;
+    height: 16px;
+    background: #d80b65;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.customersrevwrp {
+    display: flex;
+
+    overflow: hidden;
+    width: 800px;
+    margin-top: 16px;
+}
+.customersreviewelement {
+    display: block;
+    width: 800px;
+    flex-shrink: 0;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+.custexpleftslide,
+.custexprightslide {
+    width: 48px;
+    height: 48px;
+    border-top: 4px solid #d80b65;
+    border-left: 4px solid #d80b65;
+    transform-origin: center center;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.custexpleftslide {
+    transform: rotate(-45deg);
+}
+.custexprightslide {
+    transform: rotate(135deg);
+}
+
+.custreveltitle {
+    text-align: center;
+    color: #d80b65;
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 24px;
+}
+.custrevelauthor {
+    margin-top: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    text-align: center;
+}
+.custreveltxt {
+    font-size: 1rem;
+    line-height: 1.3;
+    font-weight: 500;
+}
+.custextpagemarker {
+    display: flex;
+    gap: 16px;
+    margin-top: 88px;
+    justify-content: center;
+    align-items: center;
+}
+.pagemarkergrey {
+    width: 8px;
+    height: 8px;
+    background: #cdcdcd;
+    transform: rotate(45deg);
+    transform-origin: center center;
+    cursor: pointer;
+}
+.pagemarkerfull {
+    width: 16px;
+    height: 16px;
+    background: #d80b65;
+    transform: rotate(45deg);
+    transform-origin: center center;
+}
+
+.faqglobalwrp {
+    background: #d80b65;
+
+    padding-top: 120px;
+    padding-bottom: 120px;
+    justify-content: center;
+    display: flex;
+}
+
+.faqdiamond {
+    width: 16px;
+    height: 16px;
+    transform: rotate(45deg);
+    transform-origin: center center;
+    background: #562462;
+}
+.faqcenterwrp {
+    width: 1136px;
+    display: flex;
+    flex-direction: column;
+}
+.faqtxt {
+    margin-top: 40px;
+    color: white;
+    margin-bottom: 40px;
+}
+.faqquwrp {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.faqqlinerleftwrp {
+}
+.faqquliner {
+    background: white;
+    display: flex;
+    gap: 16px;
+    padding: 24px;
+    width: 100%;
+    justify-content: space-between;
+}
+.gaqqulineropenqbutton {
+    width: 48px;
+    height: 48px;
+    background: #562462;
+    outline: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.faqqulinerqu {
+    color: #562462;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.faqqulinerahidden {
+    overflow: hidden;
+    opacity: 0;
+    font-weight: 500;
+    line-height: 1.3;
+    margin-top: 0px;
+    overflow: hidden;
+    transition-duration: 200ms;
+    height: 0px;
+}
+
+.faqqulinera {
+    font-weight: 500;
+    line-height: 1.6;
+    margin-top: 40px;
+    overflow: hidden;
+    transition-duration: 200ms;
+    opacity: 1;
+
+    white-space: initial;
+}
+.faqqulinera br {
+    display: block; /* makes it have a width */
+    content: ""; /* clears default height */
+    margin-top: 8px; /* change this to whatever height you want it */
+}
+
+.gaqqulineropenqbuttonclicked {
+    width: 48px;
+    height: 48px;
+    color: #562462;
+    outline: none;
+    border: none;
+    background: white;
+    border: 2px solid #562462;
+
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.cantfindanswerbutton {
+    text-transform: uppercase;
+    font-size: 1rem;
+    margin-top: 48px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #562462;
+    color: white;
+    height: 64px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    padding-left: 24px;
+    padding-right: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.aboutusglobalwrp {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    width: 1136px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.aboutusdiamond {
+    width: 16px;
+    height: 16px;
+    background: #d80b65;
+    transform: rotate(45deg);
+    transform-origin: center center;
+}
+.aboutusaboutus {
+    margin-top: 48px;
+
+    margin-bottom: 48px;
+}
+.aboutustxt {
+    max-width: 1136px;
+    line-height: 1.3;
+    font-weight: 500;
+}
+.aboutusmainwrp {
+    display: flex;
+    gap: 152px;
+    align-items: center;
+    width: 1136px;
+}
+.aboutusbuttongetintouch {
+    display: inline-block;
+    text-transform: uppercase;
+    height: 64px;
+    background: #d80b65;
+    color: white;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 48px;
+    width: fit-content;
+    padding-left: 48px;
+    padding-right: 48px;
+    cursor: pointer;
+}
+.aboutusrightlogowrp {
+    font-size: 7.5rem;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    line-height: 0.7;
+    float: left;
+    height: fit-content;
+    height: 170px;
+    padding-right: 24px;
+}
+.aboutuslogopointhider {
+    width: 48px;
+    height: 48px;
+    background: white;
+    position: absolute;
+    transform: translate(60px, -84px);
+}
+.aboutuslogodiamond {
+    width: 40px;
+    height: 40px;
+    background: #d80b65;
+    position: absolute;
+    left: 65%;
+    top: -28px;
+    transform: rotate(45deg);
+}
+.getintouchinsidewrp {
+    width: 1136px;
+}
+
+.getintouchglobalwrp {
+    background: #210029;
+    padding-top: 120px;
+    padding-bottom: 72px;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.getintouchtitle {
+    margin-bottom: 40px;
+}
+
+.getintouchrightwrp {
+    display: flex;
+    flex-direction: column;
+    width: 656px;
+    gap: 24px;
+}
+.getintouchtxt {
+    font-size: 1rem;
+    line-height: 1.3;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+.getintouchiconswrp {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.getintouchicontitle {
+    font-size: 1.25rem;
+    color: #d80b65;
+    font-weight: 800;
+    margin-bottom: 4px;
+}
+
+.getintouchicontxt {
+    font-weight: 500;
+    line-height: 1.3;
+}
+.getintouchbottomwrp {
+    display: flex;
+    width: 1136px;
+    justify-content: space-between;
+}
+.gitrgthinptinpt {
+    width: 100%;
+    height: 64px;
+
+    padding: 16px;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.getitchtxt {
+    line-height: 1.3;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.getintoucchrightinputs {
+    display: grid;
+    grid-template-columns: 304px 304px;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.gitchtxtarea {
+    font-weight: 500;
+    resize: vertical;
+    width: 656px;
+    min-height: 232px;
+    padding: 16px;
+    font-size: 1rem;
+    font-family: inherit;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+}
+.gitrinpttxt {
+    margin-bottom: 4px;
+}
+.getintouchtickwrp {
+    display: flex;
+    gap: 6px;
+    align-items: flex-start;
+}
+.gitouchsendmessagebtn {
+    background: #d80b65;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-start;
+    padding-left: 64px;
+    padding-right: 64px;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    font-family: inherit;
+}
+.termcondtopwrp {
+    display: flex;
+    margin-top: 56px;
+}
+.termcondsspacer {
+    height: 16px;
+    width: 1px;
+    background: white;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+.termcondbottomwrp {
+    margin-top: 16px;
+}
+.howitworksdiamond {
+    width: 16px;
+    height: 16px;
+    background: #d80b65;
+    transform: rotate(45deg);
+}
+
+.howitworkscenterwrp {
+    width: 1136px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.hoitelliner {
+    position: relative;
+    border: 4px dashed white;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    padding: 72px;
+
+    padding-bottom: 56px;
+}
+.howitworksabsolutenr {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 0px;
+    left: 16px;
+    transform: translateY(-50%);
+    font-weight: 600;
+    background: #d80b65;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.howitworksinsidetitle {
+    text-align: center;
+    color: white;
+
+    font-weight: 800;
+    margin-bottom: 16px;
+}
+.howitworkselementswrp {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 360px);
+    width: 100%;
+    gap: 24px;
+    justify-content: center;
+    margin-bottom: 80px;
+}
+
+.howitlinerimg {
+    width: 100%;
+    height: fit-content;
+    margin-top: auto;
+}
+
+.hoittxt2 {
+    color: #d80b65;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 48px;
+}
+
+.signinwindowglobalwrapper {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.534);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+
+    overflow: auto;
+}
+.quoteareaglobalwrapper,
+.heroareapostcodewarning {
+    width: 100%;
+    height: calc(100vh - 88px);
+    position: fixed;
+    top: 88px;
+    background: rgba(0, 0, 0, 0.534);
+    z-index: 1;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.quoteareamiddlewrapper {
+    background: white;
+    padding: 56px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-bottom: 0;
+    align-items: center;
+}
+.quoteareinput {
+    height: 56px;
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+    border: 2px solid #d4d4d4;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 32px;
+    margin-bottom: 16px;
+}
+.quoteareaparagraph {
+    line-height: 1.3;
+}
+.quotearequotebutton {
+    background: #d80b65;
+    color: white;
+    text-transform: uppercase;
+    width: 100%;
+    height: 56px;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+.quoteareaclosebutton {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 2rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.quoteareaparagraphheroarea {
+    margin-bottom: 40px;
+    font-size: 1.5rem;
+    color: #d80b65;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.signwindowcenterwrp {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    padding: 48px;
+    align-items: center;
+    height: fit-content;
+    width: 520px;
+    line-height: 1.3;
+    position: relative;
+}
+.signbutton,
+.signbuttonmarked {
+    border: 2px solid #d80b65;
+    height: 64px;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    padding: 4px;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #d80b65;
+    cursor: pointer;
+    font-weight: 600;
+}
+.signupsmalltxt {
+    font-size: 0.75rem;
+    margin-top: 4px;
+}
+.signwindowtopbtnswrp {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+}
+.signbuttonmarked {
+    background: #d80b65;
+    color: white;
+}
+.signupwrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 24px;
+    margin-top: 40px;
+}
+.signupinfoabout8symbols {
+    grid-column: 1/-1;
+    color: black;
+    font-size: 0.75rem;
+    line-height: 1.6;
+}
+.mobilemenuaccountbutton {
+    width: 48px;
+    height: 48px;
+    background: #d80b65;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.signupwrapperup {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+
+    margin-top: 40px;
+}
+
+.signupinput {
+    box-sizing: border-box;
+}
+.signupinput:nth-child(3) {
+    grid-column: 1/-1;
+}
+.signupinput:nth-child(4) {
+    grid-column: 1/-1;
+}
+.signupinput:nth-child(5) {
+    grid-column: 1/-1;
+}
+.signupfullinputs {
+    height: 56px;
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+    border: 2px solid #d4d4d4;
+    font-size: 1rem;
+}
+
+.signupsignupbutton {
+    width: 100%;
+    height: 64px;
+    background: #d80b65;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    grid-column: 1/-1;
+}
+
+.signupgreysplitter {
+    height: 1px;
+    width: 100%;
+    background-color: #d4d4d4;
+    grid-column: 1/-1;
+    margin-top: 24px;
+}
+.signupreferalcodetxt {
+    color: #d80b65;
+    font-weight: 500;
+    font-weight: 16px;
+    text-decoration: underline;
+    text-align: center;
+    grid-column: 1/-1;
+}
+.closesigninwindow {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.loggedbuttonwrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 184px;
+}
+.accountdropdownwrapper {
+    position: absolute;
+    top: 100%;
+    background: white;
+    width: 184px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    z-index: 10;
+    padding: 24px;
+    transform: translateY(8px);
+}
+.acountdrpdwnlistitem {
+    display: inline-block;
+    white-space: nowrap;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #d80b65;
+    cursor: pointer;
+}
+.accountdrpdwnsplitter {
+    width: 100%;
+    height: 1px;
+    background: black;
+}
+.accountdrpdwsignout {
+    font-size: 1rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type="number"] {
+    -moz-appearance: textfield; /* Firefox */
+}
+
+.loginerrorp,
+.forgotpasslink {
+    color: #d80b65;
+    grid-column: 1/-1;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+.loginerrorp {
+    width: 100%;
+    text-align: center;
+}
+.forgotpasslink {
+    text-decoration: underline;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 24px;
+    font-size: 1rem;
+}
+.loginerrorbutton {
+    width: 100%;
+    background: #43184d;
+    color: white;
+    height: 64px;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.logerrorwrp {
+    display: flex;
+    flex-direction: column;
+    gap: 88px;
+    margin-top: 88px;
+    width: 100%;
+}
+/*  */
+/* 
+
+
+
+
+*/
+/* Customize the label (the container) */
+.container {
+    position: relative;
+    padding-left: 35px;
+    height: 24px;
+    cursor: pointer;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    color: black;
+    font-weight: 600;
+}
+
+.container input {
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark,
+.checkmarkoff {
+    position: absolute;
+    left: 0;
+    height: 24px;
+    width: 24px;
+    background-color: #d80b65;
+}
+.checkmarkoff {
+    background-color: transparent;
+    border: 2px solid #d4d4d4;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.downloadjobbutton {
+    width: inherit;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-sizing: border-box;
+}
+.termscondspan {
+    cursor: pointer;
+}
+.showtermswrapper {
+    position: fixed;
+    top: 88px;
+    width: 100%;
+    height: calc(100vh - 88px);
+    background: rgba(0, 0, 0, 0.301);
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+.showtermsinsidewrapper {
+    background-color: white;
+    margin-top: 16px;
+    position: relative;
+    width: fit-content;
+    color: black;
+    height: calc(100vh - 88px - 64px);
+    overflow: hidden;
+}
+.termsclosebutton {
+    font-size: 1.25rem;
+    cursor: pointer;
+    float: right;
+    font-weight: 600;
+}
+.termswrpclosewrp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+.termswrapper {
+    max-width: 80ch;
+    font-size: 1rem;
+    line-height: 1.4;
+    padding: 24px;
+}
+.termsinsidtextwrp {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    height: calc(100vh - 88px - 64px - 64px - 40px);
+
+    overflow: auto;
+}
+.termstextblock {
+    margin-right: 16px;
+}
+.termstexttitle {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+.br {
+    display: block;
+    margin-bottom: 16px;
+}

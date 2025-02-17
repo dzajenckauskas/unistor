@@ -1,0 +1,543 @@
+@media screen and (max-width: 1600px) {
+    .usereditmainsectionleftwrp,
+    .usereditmainsectionrightwrp {
+        width: 50%;
+    }
+    .usereditmainsection {
+        padding-left: 4px;
+        padding-right: 4px;
+        gap: 8px;
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 1550px) {
+    .heroarearightwrp {
+        margin-right: -15vw;
+    }
+}
+@media screen and (max-width: 1450px) {
+    .heroarearightwrp {
+        margin-right: -30vw;
+    }
+}
+@media screen and (max-width: 1380px) {
+    .navbarphonebutton {
+        display: none;
+    }
+}
+@media screen and (max-width: 1300px) {
+    html {
+        font-size: 14px;
+    }
+    .heroareaglobalwrapper {
+        height: auto;
+        padding-top: 24px;
+        padding-left: 24px;
+    }
+    .studentstorageareawrp {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+    .customersexpreviewswrp {
+        width: 100%;
+    }
+    .faqcenterwrp,
+    .aboutusmainwrp {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+    .aboutusglobalwrp {
+        width: 100%;
+    }
+    .navbarlogocubewrapper {
+        left: 58px;
+        top: -9px;
+    }
+    .navbarlogopointhider {
+        left: 52px;
+    }
+    .aboutusmainwrp {
+        gap: 32px;
+        justify-content: space-around;
+        width: 100%;
+    }
+    .getintouchinsidewrp {
+        width: 100%;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+    .getintouchbottomwrp {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .navbarrouteswrapper {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top: 0;
+        left: 0;
+        background: #562462;
+        color: white;
+
+        padding-right: 48px;
+        padding-bottom: 40px;
+        width: calc(100vw - 24px - 24px);
+        align-items: center;
+        animation-name: navbarwidth;
+        animation-duration: 200ms;
+        animation-fill-mode: forwards;
+        overflow: hidden;
+        z-index: -1;
+        height: fit-content;
+    }
+    .navbarmobilemenubutton {
+        display: block;
+    }
+    .bookingglobalwrapper {
+        width: 100%;
+        gap: 48px;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+    .navbarroute {
+        font-size: 1.5rem;
+    }
+}
+
+@keyframes navbarwidth {
+    from {
+        width: 0;
+        height: 0px;
+        padding-left: 0;
+        padding-top: 0;
+    }
+
+    to {
+        width: calc(100vw - 24px - 24px);
+        height: 334px;
+        padding-left: calc(48px + 24px);
+        padding-top: 48px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .paymentconfirmedwrp {
+        grid-template-columns: 464px;
+    }
+    .confirmstudentleft,
+    .confirmstudentright {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .booking-right-page {
+        position: fixed;
+        background: white;
+        top: 0px;
+        right: 0px;
+        overflow: scroll;
+        max-width: 464px;
+        max-height: calc(100vh - 88px);
+    }
+    .myaccounttable {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .linebarafterherowrp {
+        display: none;
+    }
+    .bookingglobalwrapper {
+        flex-direction: column;
+        gap: 0;
+        align-items: center;
+    }
+    .profareacenterwrp {
+        flex-direction: column-reverse;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+    .bookinglinerwrapper {
+        display: none;
+    }
+    .boking-left-page {
+        width: 100%;
+    }
+    .getintouchbottomwrp {
+        flex-direction: column;
+        align-items: center;
+        gap: 48px;
+    }
+    .stagewrapperleftwrp {
+        width: 100%;
+    }
+
+    .storageleftboxeswrapper,
+    .storageleftitemswrapper {
+        justify-items: self-start;
+        grid-template-columns: repeat(auto-fit, 1fr);
+        gap: 16px;
+        row-gap: 56px;
+    }
+
+    .stagewrapperlefttitle,
+    .stagetitle,
+    .stagewrapperlefttitlebottom {
+        text-align: center;
+    }
+    .getintouchleftwrp {
+        display: flex;
+        gap: 48px;
+    }
+    .getintouchtitle {
+        text-align: center;
+    }
+    .heroareacenterwrp {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        padding-top: 24px;
+    }
+    .customersexperienceareawrp {
+        padding-top: 64px;
+        padding-bottom: 64px;
+    }
+    .studentstorageareawrp {
+        padding-top: 64px;
+    }
+
+    .heroarearightwrp {
+        margin: 0;
+        margin-top: 32px;
+        width: 160%;
+
+        display: flex;
+        justify-content: center;
+    }
+    .studentsstoragerightimgwrp {
+        margin-top: 40px;
+    }
+    .heroimage {
+        height: 100%;
+        aspect-ratio: 15/7;
+    }
+    .heroarealeftwrp {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: fit-content;
+    }
+    .heroarealeftmiddle {
+        text-align: center;
+    }
+    .heroarealeftbottom {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        width: 100%;
+        outline: none;
+        background: none;
+    }
+    .getquoteorengebutton {
+        width: 100%;
+    }
+    .heroarealefttop {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .heroareaglobalwrapper {
+        padding: 0;
+        height: auto;
+    }
+    .postcodeinput {
+        width: 100%;
+        height: 64px;
+        border: 2px solid #d80b65;
+    }
+    .getquotebuttonlink {
+        width: 100%;
+    }
+    .customersexpreviewswrp,
+    .customersexpcenterwrp,
+    .customersreviewelement {
+        width: 100%;
+    }
+    .customersreviewelement {
+        text-align: center;
+    }
+    .customersexpreviewswrp {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .custexprightslide,
+    .custexpleftslide {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .myaccountbookingsglobalsectiopn {
+        align-items: center;
+    }
+    .myaccountsignoutbutton,
+    .myaccounttablenavbarbutton,
+    .myaccounttablenavbarbuttonclicked {
+        width: 304px !important;
+        padding: 0px !important;
+    }
+    .getintouchrightwrp,
+    .gitchtxtarea {
+        width: 100%;
+    }
+    .getintoucchrightinputs {
+        grid-template-columns: 1fr;
+    }
+    .accountdropdownwrapper {
+        right: 24px;
+    }
+    .booking-stage5 {
+        width: 100%;
+    }
+    .rightpagetotalbutton {
+        margin-top: 0;
+        right: 0;
+    }
+
+    .referralcodeinputbookingstage5,
+    .referralcodeinputbookingstage5false,
+    .referralcodeinputbookingstage5true {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 590px) {
+    .studentsstoragerightimgwrp {
+        width: 100%;
+    }
+    .signwindowtopbtnswrp {
+        grid-template-columns: 1fr;
+    }
+    .heroareaatoptxt,
+    .herosecondline {
+        font-size: 3rem;
+    }
+    .heroeasierword {
+        font-size: 4.5rem;
+    }
+    .aboutusrightlogowrp {
+        display: none;
+    }
+    .signupwrapperup {
+        display: flex;
+        flex-direction: column;
+    }
+    .signupwrapperup,
+    .signwindowcenterwrp {
+        width: 100%;
+    }
+    .signwindowtopbtnswrp {
+        flex-direction: column;
+        width: 100%;
+        gap: 16px;
+    }
+    .signbuttonmarked,
+    .signbutton {
+        width: 100%;
+    }
+    .stage5-stagetitle {
+        width: fit-content;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .calendar-bottom {
+        gap: 1px;
+    }
+    .stripecardelementformadmintopwrp {
+        grid-template-columns: 104px 1fr;
+    }
+    .ordereditpaymentinsidewrp {
+        width: 100%;
+    }
+    .stripecardelementformadminbottom {
+        align-items: flex-end;
+    }
+
+    .stripecardelementformadminbottom {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .stage3title,
+    .stage3title2,
+    .stage3packingtitle2 {
+        text-align: center;
+    }
+    .heroareacenterwrp {
+        width: 100%;
+    }
+    .heroarealeftwrp {
+        width: 400px;
+    }
+    .profarealeftimg {
+        width: 50%;
+    }
+    .pfarigttwrp {
+        width: 100%;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+    .booking-right-page {
+        padding: 32px;
+        width: calc(100% - 16px);
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .signupwrapper {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 430px) {
+    .heroareaatoptxt,
+    .herosecondline {
+        font-size: 2rem;
+    }
+
+    .paymentconfirmedwrp {
+        grid-template-columns: 1fr;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .heroeasierword {
+        font-size: 4rem;
+    }
+
+    .mobilesectionmyaccount {
+        padding: 40px 8px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .bookingcalendarinsidewrpmobile {
+        padding-left: 8px;
+        padding-right: 8px;
+        width: 100%;
+    }
+
+    .heroarealeftmiddle {
+        width: 100%;
+    }
+    .cantfindanswerbutton {
+        width: 100%;
+    }
+    .studentstorageleftwrp {
+        padding: 0;
+        width: 100%;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+    .heroareacenterwrp {
+        width: 100%;
+
+        overflow: hidden;
+    }
+    .heroarealeftwrp {
+        width: 360px;
+    }
+    .heroimage {
+        height: 70%;
+    }
+    .aboutusbuttongetintouch,
+    .gitouchsendmessagebtn {
+        width: 100%;
+    }
+    .termcondtopwrp {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+    .termcondbottomwrp {
+        text-align: center;
+    }
+    .termcondsspacer {
+        display: none;
+    }
+}
+@media screen and (max-width: 390px) {
+    .continuebutton {
+        width: 100%;
+    }
+
+    .myaccountorderaddressinsidewrp,
+    .ordereditpaymentinsidewrp {
+        padding: 40px 8px;
+        width: 100%;
+    }
+
+    .quoteareamiddlewrapper {
+        width: 100%;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .bookingglobalwrapper {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    .heroarealeftwrp {
+        width: 304px;
+    }
+    .getquotemdfkwrp {
+        width: 100%;
+    }
+    .hoitelliner {
+        padding: 56px;
+    }
+    .heroarealefttop {
+        font-size: 2.5em;
+    }
+    .howitworkselementswrp {
+        margin-bottom: 32px;
+    }
+    .howitworksquotebuttonwrp {
+        width: 304px;
+    }
+
+    .howitworkselementswrp {
+        grid-template-columns: repeat(auto-fill, 304px);
+    }
+    .howitworksareawrapper {
+        padding-bottom: 64px;
+    }
+}
+@media screen and (max-width: 330px) {
+    .myaccounttablenavbarbutton {
+        width: 100%;
+    }
+}
+
+@media screen and (min-height: 1000px) {
+    .signinwindowglobalwrapper {
+        align-items: center;
+    }
+}
+@media screen and (max-height: 1000px) {
+    .signwindowcenterwrp {
+        margin-top: 104px;
+        margin-bottom: 24px;
+    }
+}
+@media screen and (max-height: 750px) {
+    .paymentconfirmedwrp {
+        margin-top: 5vh;
+    }
+}
