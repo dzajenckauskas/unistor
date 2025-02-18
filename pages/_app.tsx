@@ -1,22 +1,21 @@
-import "../styles/globals.css";
-import "../styles/booking.css";
-import "../styles/my_account.css";
 import "../styles/admin.css";
-import "../styles/password_recovery.css";
+import "../styles/booking.css";
+import "../styles/globals.css";
 import "../styles/medias.css";
+import "../styles/my_account.css";
+import "../styles/password_recovery.css";
 
-import {Montserrat} from "@next/font/google";
-import Navbar from "../COMPONENTS/navbar/navbar";
-import {useEffect, useState} from "react";
+import { Montserrat } from "@next/font/google";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 import SignInWindow from "../COMPONENTS/global_elements/signInwindow";
-import {fetchData} from "../HELPERS/fetchdata";
-import {useRouter} from "next/router";
-import Headfn from "../COMPONENTS/global_elements/head";
+import Navbar from "../COMPONENTS/navbar/navbar";
 import PasswordRecovery from "../COMPONENTS/passwordRecovery";
+import { fetchData } from "../HELPERS/fetchdata";
 
 const montserrat = Montserrat();
 
-function MyApp({Component, pageProps}) {
+function MyApp({ Component, pageProps }) {
     const router = useRouter();
     const [signwindow, setsignwindow] = useState(false);
     const [logged, setlogged] = useState(false);
@@ -60,7 +59,6 @@ function MyApp({Component, pageProps}) {
 
     return (
         <div className={montserrat.className}>
-            <Headfn />
             {signwindow ? (
                 <SignInWindow
                     signwindow={signwindow}

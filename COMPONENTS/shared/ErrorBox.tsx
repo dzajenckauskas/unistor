@@ -8,6 +8,8 @@ type Props = {
   sx?: SxProps;
 }
 const ErrorBox = ({ sx, error, mt }: Props) => {
+  console.log(error, "error");
+
   return (
     <Stack sx={{ mt: mt ?? 0, }}>
       <Typography sx={{ ...sx }} variant="caption" color={'error'}>{error}</Typography>
