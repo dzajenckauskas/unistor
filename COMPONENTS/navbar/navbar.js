@@ -19,11 +19,16 @@ export default function Navbar({
 
     const [screenwidth, setscreenwidth] = useState(0);
 
-    const routes = [
+
+    console.log(router, "router");
+    const isActive = router.pathname.includes('blog')
+    const routes1 = [
         "How it works?",
         "Student storage",
         "Professional packing",
-        "FAQ",
+        "FAQ"
+    ];
+    const routes2 = [
         "About us",
         "Contact us",
     ];
@@ -202,7 +207,7 @@ export default function Navbar({
     function navbarroutes(params) {
         return (
             <nav className="navbarrouteswrapper">
-                {routes.map((r) => {
+                {routes1.map((r) => {
                     return (
                         <div
                             className={
@@ -226,7 +231,7 @@ export default function Navbar({
                 })}
                 <div
                     className={
-                        clickedlink === 'Blog'
+                        (clickedlink === 'Blog' || isActive)
                             ? "navbarroute-clicked"
                             : "navbarroute"
                     }
@@ -242,6 +247,28 @@ export default function Navbar({
                 >
                     <Link href={'/blog'}>{'Blog'}</Link>
                 </div>
+                {routes2.map((r) => {
+                    return (
+                        <div
+                            className={
+                                clickedlink === r
+                                    ? "navbarroute-clicked"
+                                    : "navbarroute"
+                            }
+                            key={r}
+                            onClick={() => {
+                                signwindow(false);
+                                if (router.pathname !== "/") {
+                                    router.push("/");
+                                }
+                                scrollintoview(r);
+                                setclickedlink(r);
+                            }}
+                        >
+                            {r}
+                        </div>
+                    );
+                })}
 
             </nav>
         );

@@ -139,12 +139,8 @@ export default function Home({ scrollintoview, homePage }) {
 
 
 export async function getServerSideProps() {
-   console.log('lala');
-
    try {
       const homePage = await getData(`${process.env.NEXT_PUBLIC_API_URL}/api/home-page?populate=seo`)
-      console.log(homePage, "homePage");
-
       return {
          props: {
             homePage,
