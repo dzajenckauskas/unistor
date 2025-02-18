@@ -35,9 +35,9 @@ const nextConfig = {
     images: {
         remotePatterns: [
             {
-                protocol: 'http',
-                hostname: '31.187.70.160',
-                port: '1345',
+                protocol: 'https',
+                hostname: 'api.unistor.co.uk',
+                // port: '1345',
             },
         ],
     },
