@@ -1,11 +1,4 @@
 import { createTheme } from '@mui/material/styles';
-import { Montserrat } from "@next/font/google";
-
-const montserrat = Montserrat({
-    weight: ["300", "400", "500", "600", "700", "800"],
-    subsets: ['latin'],
-    display: 'swap' // Prevents font flicker
-});
 
 export const theme = createTheme({
     components: {
@@ -38,7 +31,7 @@ export const theme = createTheme({
         MuiButton: {
             styleOverrides: {
                 root: ({ theme }) => theme.unstable_sx({
-                    fontFamily: montserrat.style.fontFamily,
+                    fontFamily: 'montserrat.style.fontFamily',
                     fontSize: 14,
                     py: 1.2,
                     letterSpacing: 1,
@@ -69,11 +62,11 @@ export const theme = createTheme({
         },
     },
     // typography: {
-    //     fontFamily: montserrat.style.fontFamily,
+    //     fontFamily: 'montserrat.style.fontFamily',
     // },
     typography: {
         h1: {
-            fontFamily: montserrat.style.fontFamily,
+            fontFamily: 'montserrat.style.fontFamily',
             fontWeight: 700,
             fontSize: 32,
             '@media (min-width:600px)': {
@@ -90,7 +83,7 @@ export const theme = createTheme({
             },
         },
         h2: {
-            fontFamily: montserrat.style.fontFamily,
+            fontFamily: 'montserrat.style.fontFamily',
             fontWeight: 700,
             fontSize: 24,
             '@media (min-width:600px)': {
@@ -107,7 +100,7 @@ export const theme = createTheme({
             },
         },
         h3: {
-            fontFamily: montserrat.style.fontFamily,
+            fontFamily: 'montserrat.style.fontFamily',
             fontWeight: 700,
             fontSize: 20,
             '@media (min-width:600px)': {
@@ -124,7 +117,7 @@ export const theme = createTheme({
             },
         },
         h4: {
-            fontFamily: montserrat.style.fontFamily,
+            fontFamily: 'montserrat.style.fontFamily',
             fontSize: 18,
             '@media (min-width:600px)': {
                 fontSize: 20,
@@ -140,14 +133,14 @@ export const theme = createTheme({
             },
         },
         h5: {
-            fontFamily: montserrat.style.fontFamily,
+            fontFamily: 'montserrat.style.fontFamily',
             fontSize: 20
         },
         h6: {
-            fontFamily: montserrat.style.fontFamily,
+            fontFamily: 'montserrat.style.fontFamily',
         },
         subtitle1: {
-            fontFamily: montserrat.style.fontFamily,
+            fontFamily: 'montserrat.style.fontFamily',
             fontSize: 18,
             '@media (min-width:600px)': {
                 fontSize: 18,
@@ -163,20 +156,20 @@ export const theme = createTheme({
             },
         },
         subtitle2: {
-            fontFamily: montserrat.style.fontFamily,
+            fontFamily: 'montserrat.style.fontFamily',
             fontSize: 18,
         },
         body1: {
-            fontFamily: montserrat.style.fontFamily,
+            fontFamily: 'montserrat.style.fontFamily',
             fontSize: 16,
 
         },
         body2: {
-            fontFamily: montserrat.style.fontFamily,
+            fontFamily: 'montserrat.style.fontFamily',
             fontSize: 14
         },
         caption: {
-            fontFamily: montserrat.style.fontFamily,
+            fontFamily: 'montserrat.style.fontFamily',
             fontSize: 12
 
         }
