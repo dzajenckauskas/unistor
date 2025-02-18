@@ -2,32 +2,7 @@ import { createTheme } from '@mui/material/styles';
 
 export const theme = createTheme({
     components: {
-        MuiInputBase: {
-            styleOverrides: {
-                root: ({ theme }) => theme.unstable_sx({
-                    // 'label + &': {
-                    //     marginTop: theme.spacing(2),
-                    // },
-                    // borderRadius: 0,
-                    // backgroundColor: theme.palette.info.main
-                }),
-                input: ({ theme }) => theme.unstable_sx({
-                    // backgroundColor: theme.palette.info.main
-                }),
-                multiline: ({ theme }) => theme.unstable_sx({
-                    // backgroundColor: theme.palette.info.main
-                }),
-            }
-        },
-        MuiFormLabel: {
-            styleOverrides: {
-                root: ({ theme }) => theme.unstable_sx({
-                    // color: `${theme.palette.info.main} !important`,
-                    // fontSize: '16px !important'
-                    // borderRadius: 0,
-                }),
-            }
-        },
+
         MuiButton: {
             styleOverrides: {
                 root: ({ theme }) => theme.unstable_sx({
@@ -37,26 +12,11 @@ export const theme = createTheme({
                     py: 1.2,
                     letterSpacing: 1,
                     fontWeight: 700,
-                    borderRadius: '0px !important',
+                    borderRadius: '0px',
                     boxShadow: 'none',
                     '&:hover': {
                         boxShadow: 'none' // Removing box shadow on hover
                     }
-                }),
-
-            }
-        },
-        MuiAutocomplete: {
-            styleOverrides: {
-                popper: ({ theme }) => theme.unstable_sx({
-                    boxShadow: '0 0 10px #0000001A',
-                }),
-            }
-        },
-        MuiSvgIcon: {
-            styleOverrides: {
-                root: ({ theme }) => theme.unstable_sx({
-                    // fontSize: '28px',
                 }),
 
             }
@@ -66,6 +26,7 @@ export const theme = createTheme({
     //     fontFamily: 'montserrat.style.fontFamily',
     // },
     typography: {
+        fontFamily: 'montserrat.style.fontFamily',
         h1: {
             fontFamily: 'montserrat.style.fontFamily',
             fontWeight: 700,

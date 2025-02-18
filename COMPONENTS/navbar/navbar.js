@@ -211,7 +211,7 @@ export default function Navbar({
                     return (
                         <div
                             className={
-                                clickedlink === r
+                                (!isActive && clickedlink === r)
                                     ? "navbarroute-clicked"
                                     : "navbarroute"
                             }
@@ -231,18 +231,13 @@ export default function Navbar({
                 })}
                 <div
                     className={
-                        (clickedlink === 'Blog' || isActive)
+                        (isActive)
                             ? "navbarroute-clicked"
                             : "navbarroute"
                     }
                     key={'blog'}
                     onClick={() => {
                         signwindow(false);
-                        // if (router.pathname !== "/") {
-                        //     router.push("/blog");
-                        // }
-                        // scrollintoview(r);
-                        setclickedlink("Blog");
                     }}
                 >
                     <Link href={'/blog'}>{'Blog'}</Link>
@@ -251,7 +246,7 @@ export default function Navbar({
                     return (
                         <div
                             className={
-                                clickedlink === r
+                                (!isActive && clickedlink === r)
                                     ? "navbarroute-clicked"
                                     : "navbarroute"
                             }

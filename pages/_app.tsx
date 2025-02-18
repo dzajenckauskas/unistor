@@ -4,7 +4,7 @@ import "../styles/globals.css";
 import "../styles/medias.css";
 import "../styles/my_account.css";
 import "../styles/password_recovery.css";
-
+import { ThemeProvider } from '@mui/material/styles';
 import { Montserrat } from "@next/font/google";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
@@ -12,6 +12,7 @@ import SignInWindow from "../COMPONENTS/global_elements/signInwindow";
 import Navbar from "../COMPONENTS/navbar/navbar";
 import PasswordRecovery from "../COMPONENTS/passwordRecovery";
 import { fetchData } from "../HELPERS/fetchdata";
+import { theme } from "../COMPONENTS/shared/Theme";
 
 const montserrat = Montserrat();
 
@@ -58,62 +59,64 @@ function MyApp({ Component, pageProps }) {
     }, [router.pathname]);
 
     return (
-        <div className={montserrat.className}>
-            {signwindow ? (
-                <SignInWindow
-                    signwindow={signwindow}
-                    setsignwindow={(c) => {
-                        setsignwindow(c);
-                    }}
-                    loggedIn={(e) => {
-                        setlogged(e);
-                    }}
-                    setshowrecovery={(el) => {
-                        setshowrecovery(el);
-                    }}
-                />
-            ) : null}
+        <ThemeProvider theme={theme}>
+            <div className={montserrat.className}>
+                {signwindow ? (
+                    <SignInWindow
+                        signwindow={signwindow}
+                        setsignwindow={(c) => {
+                            setsignwindow(c);
+                        }}
+                        loggedIn={(e) => {
+                            setlogged(e);
+                        }}
+                        setshowrecovery={(el) => {
+                            setshowrecovery(el);
+                        }}
+                    />
+                ) : null}
 
-            {showrecover ? (
-                <PasswordRecovery
-                    setshowrecovery={(el) => {
-                        setshowrecovery(el);
-                        setsignwindow(true);
-                    }}
-                />
-            ) : null}
+                {showrecover ? (
+                    <PasswordRecovery
+                        setshowrecovery={(el) => {
+                            setshowrecovery(el);
+                            setsignwindow(true);
+                        }}
+                    />
+                ) : null}
 
-            {router.pathname.includes("admin") ? null : (
-                <Navbar
-                    scrollintoview={(el) => {
-                        setscrollintoview(el);
-                        setshowrecovery(false);
+                {router.pathname.includes("admin") ? null : (
+                    <Navbar
+                        scrollintoview={(el) => {
+                            setscrollintoview(el);
+                            setshowrecovery(false);
+                        }}
+                        bookingpagenr={bookingpagenr}
+                        signwindow={(c) => {
+                            setsignwindow(c);
+                        }}
+                        logged={logged}
+                        logout={(e) => {
+                            setlogged(e);
+                        }}
+                    />
+                )}
+
+                <Component
+                    {...pageProps}
+                    setbookingpagenr={(nr) => {
+                        setbookingpagenr(nr);
                     }}
-                    bookingpagenr={bookingpagenr}
-                    signwindow={(c) => {
-                        setsignwindow(c);
-                    }}
+                    pagenr={bookingpagenr}
                     logged={logged}
+                    setsignwindow={setsignwindow}
+                    scrollintoview={scrollintoview}
                     logout={(e) => {
                         setlogged(e);
                     }}
                 />
-            )}
-
-            <Component
-                {...pageProps}
-                setbookingpagenr={(nr) => {
-                    setbookingpagenr(nr);
-                }}
-                pagenr={bookingpagenr}
-                logged={logged}
-                setsignwindow={setsignwindow}
-                scrollintoview={scrollintoview}
-                logout={(e) => {
-                    setlogged(e);
-                }}
-            />
-        </div>
+            </div>
+        </ThemeProvider>
     );
 }
 
