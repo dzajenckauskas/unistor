@@ -1632,7 +1632,7 @@ input[type="number"] {
 }
 
 .dynamicContent li {
-    padding-bottom: 1rem;
+    padding-bottom: .5rem;
 }
 
 .dynamicContent td {
@@ -1682,13 +1682,13 @@ input[type="number"] {
 }
 
 .dynamicContent h1 {
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
 }
 
 .dynamicContent h2 {
     font-size: 32px;
-    padding-top: 4rem;
-    padding-bottom: 2rem;
+    padding-top: 1rem;
+    padding-bottom: .5rem;
     color: #d80b65 !important;
 }
 
@@ -1697,18 +1697,18 @@ input[type="number"] {
 }
 
 .dynamicContent h3 {
-    padding-bottom: 2rem;
-    padding-top: 3rem;
+    padding-bottom: .5rem;
+    padding-top: 1rem;
 }
 
 .dynamicContent h4 {
-    padding-bottom: 1rem;
+    padding-bottom: .5rem;
     padding-top: 1rem;
 }
 
 .dynamicContent p {
     /* font-size: 16px; */
-    padding-bottom: 2rem;
+    padding-bottom: .5rem;
 }
 
 .dynamicContent li {
