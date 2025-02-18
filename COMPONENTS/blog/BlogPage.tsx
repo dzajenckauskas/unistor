@@ -8,13 +8,14 @@ import PageLayout from '../common/PageLayout';
 import BreadcrumbsComponent from '../shared/BreadcrumbsComponent';
 import { theme } from '../shared/Theme';
 import { ArticleDataType, ArticlesResponseType } from '../types/ArticleTypes';
+import Button from '@mui/material/Button';
 
 type Props = {
     articles?: ArticlesResponseType;
 }
 
 const BlogPage = ({ articles }: Props) => {
-    const [active, setActive] = useState<string | undefined>('all-posts')
+    const [active, setActive] = useState<string | undefined>('Newest first')
 
     const renderLatestArticlesLoading = Array.from({ length: 8 })?.map((_, index) => {
         return (
@@ -24,7 +25,16 @@ const BlogPage = ({ articles }: Props) => {
         )
     })
 
-    const filteredArticles = articles?.data
+    const filteredArticles = articles?.data?.sort((a, b) => {
+        if (active === 'Newest first') {
+            return new Date(b.attributes.createdAt).getTime() - new Date(a.attributes.createdAt).getTime();
+        }
+        if (active === 'Oldest first') {
+            return new Date(a.attributes.createdAt).getTime() - new Date(b.attributes.createdAt).getTime();
+        }
+        return 0; // Ensure a default return value to prevent errors
+    });
+
     const renderLatestArticles = filteredArticles
         ?.map((a: ArticleDataType) => {
             return (
@@ -33,6 +43,7 @@ const BlogPage = ({ articles }: Props) => {
                 </Grid>
             )
         })
+
 
 
     return (
@@ -55,36 +66,49 @@ const BlogPage = ({ articles }: Props) => {
                     display: 'flex', flexDirection: 'column',
                     backgroundColor: "#efefef",
                     width: '100%',
-                    pb: 6
+                    pt: 2,
+                    pb: 10
                 }}>
                     <Stack sx={{
                         width: '100%'
                     }}>
-                        {/* <Typography variant='body2' color={theme.palette.secondary.main} sx={{ pb: 2, fontWeight: 600 }}>
-                            {'Filter by continent:'}
-                        </Typography> */}
+                        <Typography variant='body2' color={theme.palette.secondary.main} sx={{ pb: 1, fontWeight: 600 }}>
+                            {'Sort by:'}
+                        </Typography>
 
-                        {/* <Stack direction={'row'} sx={{
+                        <Stack direction={'row'} sx={{
                             display: 'flex',
                             paddingBottom: 3,
                             gap: 1,
                             flexWrap: 'wrap'
                         }}>
                             <Button
-                                onClick={() => setActive('all-posts')}
+                                onClick={() => setActive('Newest first')}
+                                style={{
+                                    padding: '10px 18px',
+                                    fontSize: 12,
+                                    cursor: 'pointer',
+                                    backgroundColor: active == 'Newest first' ? '#e71d5e' : '#d9d9d9',
+                                    color: active == 'Newest first' ? '#fff' : '#e71d5e',
+                                    textTransform: 'uppercase'
+                                }}>
+                                {"Newest first"}
+                            </Button>
+                            <Button
+                                onClick={() => setActive('Oldest first')}
                                 style={{
                                     padding: '10px 18px',
                                     borderRadius: '2px',
                                     fontSize: 12,
                                     cursor: 'pointer',
-                                    backgroundColor: active == 'all-posts' ? '#e71d5e' : '#d9d9d9',
-                                    color: active == 'all-posts' ? '#fff' : '#e71d5e',
+                                    backgroundColor: active == 'Oldest first' ? '#e71d5e' : '#d9d9d9',
+                                    color: active == 'Oldest first' ? '#fff' : '#e71d5e',
                                     textTransform: 'uppercase'
                                 }}>
-                                {"all posts"}
+                                {"Oldest first"}
                             </Button>
-                            {renderArticleContinents}
-                        </Stack> */}
+
+                        </Stack>
                         <Grid container spacing={2} sx={{ display: 'flex', }}>
                             {(!articles) ? renderLatestArticlesLoading : renderLatestArticles}
                         </Grid>

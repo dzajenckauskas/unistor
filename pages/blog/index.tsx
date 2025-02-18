@@ -1,10 +1,9 @@
-import React from 'react'
-import { ArticlesResponseType } from '../../COMPONENTS/types/ArticleTypes';
-import { getData } from '../../UTILS/getData';
 import BlogPage from '../../COMPONENTS/blog/BlogPage';
 import { PageHead } from '../../COMPONENTS/global_elements/PageHead';
-import { PageResponseType, SeoType } from '../../COMPONENTS/types/PageType';
 import ErrorBox from '../../COMPONENTS/shared/ErrorBox';
+import { ArticlesResponseType } from '../../COMPONENTS/types/ArticleTypes';
+import { PageResponseType } from '../../COMPONENTS/types/PageType';
+import { getData } from '../../UTILS/getData';
 
 interface BlogProps {
     articles?: ArticlesResponseType;
@@ -30,8 +29,6 @@ const Blog = ({ articles, error, blogPage }: BlogProps) => {
 export async function getServerSideProps() {
     try {
         const blogPage = await getData(`${process.env.NEXT_PUBLIC_API_URL}/api/blog-page?populate=seo`)
-        console.log(blogPage, "blogPage");
-
         const articles = await getData(`${process.env.NEXT_PUBLIC_API_URL}/api/articles?populate=image`)
         return {
             props: {

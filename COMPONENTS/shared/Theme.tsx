@@ -31,12 +31,13 @@ export const theme = createTheme({
         MuiButton: {
             styleOverrides: {
                 root: ({ theme }) => theme.unstable_sx({
-                    fontFamily: 'montserrat.style.fontFamily',
+                    fontFamily: 'inherit',
+                    // fontFamily: 'montserrat.style.fontFamily',
                     fontSize: 14,
                     py: 1.2,
                     letterSpacing: 1,
                     fontWeight: 700,
-                    borderRadius: '2px',
+                    borderRadius: '0px !important',
                     boxShadow: 'none',
                     '&:hover': {
                         boxShadow: 'none' // Removing box shadow on hover

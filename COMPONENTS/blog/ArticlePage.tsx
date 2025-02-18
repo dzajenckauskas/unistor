@@ -17,6 +17,7 @@ import FacebookIcon from '../common/FacebookIcon';
 import XIcon from '../common/XIcon';
 import FullContentSection from '../common/FullContentSection';
 import { theme } from '../shared/Theme';
+import LatestArticles from '../global_elements/LatestArticles';
 
 type Props = {
     article?: ArticleResponseType;
@@ -26,7 +27,6 @@ type Props = {
 const ArticlePage = ({ article }: Props) => {
     const pathname = usePathname()
     const url = process.env.NEXT_PUBLIC_DOMAIN_URL + pathname
-    console.log(url, "url");
 
     const date = article?.data?.attributes?.createdAt
 
@@ -192,9 +192,6 @@ const ArticlePage = ({ article }: Props) => {
                             </Stack>
                         </Stack>
                     </Stack>
-                    {/* <Stack sx={{ maxWidth: 'md', }}>
-                        <Typography component={'div'} className='dynamicContent' dangerouslySetInnerHTML={{ __html: article?.data.attributes?.fullContent }} />
-                    </Stack> */}
                     <FullContentSection fullContent={article?.data.attributes?.fullContent} />
                     <Stack width={'100%'} sx={{ maxWidth: 'md', px: { xs: 2, md: 0 } }}>
                         <Stack direction={'row'} justifyContent={'flex-start'} width={'100%'}>
@@ -291,7 +288,7 @@ const ArticlePage = ({ article }: Props) => {
                         </Stack> */}
                     </Stack>
                 </MaxWidthContainer>
-                {/* <LatestArticles /> */}
+                <LatestArticles bgColor='#fff' />
             </Stack>
         </PageLayout>
     )

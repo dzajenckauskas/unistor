@@ -25,6 +25,8 @@ const ArticleCard = ({ loading, article }: Props) => {
     return (
         <Paper key={article?.id}
             sx={{
+                pb: 4,
+                position: 'relative',
                 boxShadow: 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;',
                 width: '100%',
                 backgroundColor: "#fff",
@@ -90,7 +92,14 @@ const ArticleCard = ({ loading, article }: Props) => {
                     </> : article?.attributes?.shortContent}
                 </Typography>
 
+            </Stack>
+            <Stack sx={{
+                position: 'absolute',
+                bottom: 20,
+                left: { md: 22, xs: 16 }
+            }}>
                 <Typography sx={{
+
                     mt: 2,
                     height: '100%',
                     width: 'fit-content',

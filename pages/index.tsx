@@ -12,6 +12,7 @@ import { useEffect, useRef, useState } from "react";
 import ShowQuoteArea from "../COMPONENTS/global_elements/showquotearea";
 import { PageHead } from "../COMPONENTS/global_elements/PageHead";
 import { getData } from "../UTILS/getData";
+import LatestArticles from "../COMPONENTS/global_elements/LatestArticles";
 
 export default function Home({ scrollintoview, homePage }) {
    const [showquote, setshowquote] = useState(false);
@@ -120,6 +121,7 @@ export default function Home({ scrollintoview, homePage }) {
                   }}
                />
             </section>
+            <LatestArticles />
             <section ref={about}>
                <Aboutus
                   scrollto={() => {

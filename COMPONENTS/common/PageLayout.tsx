@@ -12,8 +12,7 @@ const PageLayout = ({ children }: { children: React.ReactNode }) => {
 
     return (
         <ThemeProvider theme={theme}>
-
-            <div style={{ marginTop: 80 }}>
+            <div style={{ marginTop: 88 }}>
                 {children}
                 <section ref={contact}>
                     <Getintoucharea />
