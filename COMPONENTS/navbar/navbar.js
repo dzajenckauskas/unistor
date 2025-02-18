@@ -19,8 +19,6 @@ export default function Navbar({
 
     const [screenwidth, setscreenwidth] = useState(0);
 
-
-    console.log(router, "router");
     const isActive = router.pathname.includes('blog')
     const routes1 = [
         "How it works?",
