@@ -1,7 +1,7 @@
 export const getData = async (url: string) => {
     try {
         const res = await fetch(url, { next: { revalidate: 30 } });
-        console.log('revalidate');
+        // console.log('revalidate');
 
         if (!res.ok) {
             // This will activate the closest `error.js` Error Boundary

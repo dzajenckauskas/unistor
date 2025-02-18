@@ -1,3 +1,13 @@
+:root {
+    --pink_color: #d80b65;
+    /* --light_grey: #ebebeb;
+    --mid_grey: #f1f1f1;
+    --dark_grey: #636363;
+    --light_black: #202020;
+    --transparent_black_background: #000000b6;
+    --green: #00a30f; */
+}
+
 body {
     line-height: 1;
 }
@@ -16,21 +26,26 @@ a {
     color: inherit;
     text-decoration: none;
 }
+
 h2 {
     font-size: 3rem;
     font-weight: 900;
 }
+
 h3 {
     font-size: 1.75rem;
     font-weight: 900;
 }
+
 h4 {
     font-size: 1.25rem;
     font-weight: 700;
 }
+
 ul {
     list-style: none;
 }
+
 p {
     font-size: 16px;
     font-weight: 500;
@@ -39,10 +54,12 @@ p {
 abbr {
     text-decoration: none;
 }
+
 input {
     font-size: 16px;
     font-weight: 500;
 }
+
 input::placeholder {
     font-family: inherit;
     font-size: 0.9rem;
@@ -54,6 +71,7 @@ button {
     outline: none;
     cursor: pointer;
 }
+
 textarea {
     padding: 16px;
     font-family: inherit;
@@ -61,16 +79,20 @@ textarea {
     font-weight: 500;
     line-height: 1.3;
 }
+
 .bookingglobalwrapper {
     display: flex;
     padding-top: 88px;
 }
+
 .indexglobalwrapper {
     padding-top: 88px;
 }
+
 .navbarroute {
     cursor: pointer;
 }
+
 .navbarroute-clicked {
     cursor: pointer;
 
@@ -95,25 +117,30 @@ textarea {
     background: white;
     z-index: 10;
 }
+
 .navbarlogo {
     display: inline-block;
     position: relative;
     cursor: pointer;
 }
+
 .navbarunistortxt {
     font-size: 3rem;
     font-weight: 900;
     line-height: 1;
 }
+
 .navbarrouteswrapper {
     display: flex;
     gap: 24px;
     font-weight: 600;
 }
+
 .navbarphoneandsignbuttonwrapper {
     display: flex;
     gap: 8px;
 }
+
 .navbarlogobottomtxt {
     line-height: 1;
     color: #d80b65;
@@ -121,10 +148,12 @@ textarea {
     font-weight: 800;
     margin-top: -4px;
 }
+
 .centerwrptext p {
     font-size: 1.25rem;
     line-height: 2;
 }
+
 .welcomebackokbutton {
     width: 302px;
     height: 56px;
@@ -152,6 +181,7 @@ textarea {
     justify-content: center;
     align-items: center;
 }
+
 .navbarsigninbutton,
 .navbarsigninbuttonlogged {
     background: #d80b65;
@@ -167,9 +197,11 @@ textarea {
     padding-right: 32px;
     cursor: pointer;
 }
+
 .navbarsigninbuttonlogged {
     width: 100%;
 }
+
 .navbarlogocube {
     position: relative;
     width: 16px;
@@ -181,6 +213,7 @@ textarea {
     transition-timing-function: linear;
     animation-delay: 400ms;
 }
+
 .navbarlogocubewrapper {
     position: absolute;
     width: 16px;
@@ -193,6 +226,7 @@ textarea {
     left: 67px;
     top: -8px;
 }
+
 .navbarmobilemenubutton {
     display: none;
     background: #562462;
@@ -223,18 +257,22 @@ textarea {
     0% {
         transform: rotate(0deg);
     }
+
     8.33%,
     25% {
         transform: rotate(90deg);
     }
+
     33.33%,
     50% {
         transform: rotate(180deg);
     }
+
     58.33%,
     75% {
         transform: rotate(270deg);
     }
+
     83.33%,
     100% {
         transform: rotate(360deg);
@@ -249,16 +287,19 @@ textarea {
     height: 20px;
     background: white;
 }
+
 .heroareaglobalwrapper {
     height: 616px;
     background: #efefef;
 }
+
 .heroarealeftwrp {
     display: flex;
     flex-direction: column;
     width: 504px;
     justify-self: center;
 }
+
 .heroarealefttop {
     font-size: 3.5rem;
     font-weight: 800;
@@ -266,15 +307,18 @@ textarea {
     align-items: center;
     letter-spacing: -2px;
 }
+
 .herosecondline {
     display: flex;
 }
+
 .heroeasierword {
     color: #d80b65;
     font-size: 5rem;
     transform: translate(8px, -8px);
     display: block;
 }
+
 .heroarealeftmiddle {
     font-weight: 600;
     margin-top: 16px;
@@ -282,14 +326,17 @@ textarea {
     line-height: 1.3;
     width: 392px;
 }
+
 .heroareaatoptxt {
     display: flex;
     align-items: center;
     margin-bottom: -16px;
 }
+
 .heroarealefttop {
     font-weight: 900;
 }
+
 .heroareaestorageword {
     padding: 8px 16px 8px 16px;
     border: 2px dashed black;
@@ -335,6 +382,7 @@ textarea {
     height: 536px;
     width: 1147px;
 }
+
 .getquoteorengebutton {
     background: #d80b65;
 
@@ -374,12 +422,14 @@ textarea {
     justify-content: space-around;
     align-items: center;
 }
+
 .lbafterheroeml {
     display: flex;
     gap: 16px;
     justify-content: center;
     align-items: center;
 }
+
 .linertxt {
     color: white;
     font-weight: 500;
@@ -388,6 +438,7 @@ textarea {
     padding: 0;
     margin: 0;
 }
+
 .lbafterherostrongertxt {
     color: #d80b65;
     font-weight: 700;
@@ -411,6 +462,7 @@ textarea {
     display: flex;
     justify-content: space-between;
 }
+
 .studentsstoragerightimgwrp {
     position: relative;
     width: 576px;
@@ -418,6 +470,7 @@ textarea {
     justify-content: center;
     align-items: flex-end;
 }
+
 .sstoragediamond {
     width: 16px;
     height: 16px;
@@ -425,22 +478,27 @@ textarea {
     transform: rotate(45deg);
     margin-bottom: 40px;
 }
+
 .studentstorageleftwrp {
     width: 424px;
 }
+
 .sstrgtxt {
     font-size: 1rem;
     font-weight: 500;
     line-height: 1.3;
     margin-bottom: 40px;
 }
+
 .sstgimg {
     width: 100%;
     height: fit-content;
 }
+
 .sstoragetitle {
     margin-bottom: 40px;
 }
+
 .pfareatxt {
     line-height: 1.3;
     color: white;
@@ -471,6 +529,7 @@ textarea {
     justify-content: center;
     align-items: center;
 }
+
 .getquotemdfkwrp {
     width: fit-content;
 }
@@ -482,6 +541,7 @@ textarea {
     display: flex;
     justify-content: center;
 }
+
 .profarealeftimg {
     width: 464px;
     position: relative;
@@ -490,19 +550,23 @@ textarea {
     align-items: flex-end;
     flex-shrink: 0;
 }
+
 .pfaimg {
     width: 100%;
     height: fit-content;
 }
+
 .pfareatitle {
     color: white;
 }
+
 .pfareadiamond {
     width: 16px;
     height: 16px;
     background: #562462;
     transform: rotate(45deg);
 }
+
 .pfarigttwrp {
     display: flex;
     flex-direction: column;
@@ -510,17 +574,20 @@ textarea {
     padding-bottom: 120px;
     width: 456px;
 }
+
 .profareacenterwrp {
     width: 1136px;
     display: flex;
     justify-content: space-between;
 }
+
 .customersexperienceareawrp {
     padding-top: 120px;
     display: flex;
     justify-content: center;
     padding-bottom: 120px;
 }
+
 .diamond {
     width: 16px;
     height: 16px;
@@ -529,6 +596,7 @@ textarea {
     transform: rotate(45deg);
     margin-bottom: 48px;
 }
+
 .customersrevtitle {
     margin-bottom: 56px;
     text-align: center;
@@ -542,17 +610,20 @@ textarea {
     margin-bottom: 24px;
     justify-content: center;
 }
+
 .customersexpcenterwrp {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .customersexpreviewswrp {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 1116px;
 }
+
 .customersexpstar {
     width: 16px;
     height: 16px;
@@ -561,6 +632,7 @@ textarea {
     justify-content: center;
     align-items: center;
 }
+
 .customersrevwrp {
     display: flex;
 
@@ -568,6 +640,7 @@ textarea {
     width: 800px;
     margin-top: 16px;
 }
+
 .customersreviewelement {
     display: block;
     width: 800px;
@@ -575,6 +648,7 @@ textarea {
     padding-left: 24px;
     padding-right: 24px;
 }
+
 .custexpleftslide,
 .custexprightslide {
     width: 48px;
@@ -585,9 +659,11 @@ textarea {
     box-sizing: border-box;
     cursor: pointer;
 }
+
 .custexpleftslide {
     transform: rotate(-45deg);
 }
+
 .custexprightslide {
     transform: rotate(135deg);
 }
@@ -599,6 +675,7 @@ textarea {
     font-size: 1rem;
     margin-bottom: 24px;
 }
+
 .custrevelauthor {
     margin-top: 40px;
     font-weight: 700;
@@ -606,11 +683,13 @@ textarea {
     font-size: 0.75rem;
     text-align: center;
 }
+
 .custreveltxt {
     font-size: 1rem;
     line-height: 1.3;
     font-weight: 500;
 }
+
 .custextpagemarker {
     display: flex;
     gap: 16px;
@@ -618,6 +697,7 @@ textarea {
     justify-content: center;
     align-items: center;
 }
+
 .pagemarkergrey {
     width: 8px;
     height: 8px;
@@ -626,6 +706,7 @@ textarea {
     transform-origin: center center;
     cursor: pointer;
 }
+
 .pagemarkerfull {
     width: 16px;
     height: 16px;
@@ -650,23 +731,27 @@ textarea {
     transform-origin: center center;
     background: #562462;
 }
+
 .faqcenterwrp {
     width: 1136px;
     display: flex;
     flex-direction: column;
 }
+
 .faqtxt {
     margin-top: 40px;
     color: white;
     margin-bottom: 40px;
 }
+
 .faqquwrp {
     display: flex;
     flex-direction: column;
     gap: 18px;
 }
-.faqqlinerleftwrp {
-}
+
+.faqqlinerleftwrp {}
+
 .faqquliner {
     background: white;
     display: flex;
@@ -675,6 +760,7 @@ textarea {
     width: 100%;
     justify-content: space-between;
 }
+
 .gaqqulineropenqbutton {
     width: 48px;
     height: 48px;
@@ -688,6 +774,7 @@ textarea {
     align-items: center;
     cursor: pointer;
 }
+
 .faqqulinerqu {
     color: #562462;
     font-size: 1.5rem;
@@ -715,10 +802,14 @@ textarea {
 
     white-space: initial;
 }
+
 .faqqulinera br {
-    display: block; /* makes it have a width */
-    content: ""; /* clears default height */
-    margin-top: 8px; /* change this to whatever height you want it */
+    display: block;
+    /* makes it have a width */
+    content: "";
+    /* clears default height */
+    margin-top: 8px;
+    /* change this to whatever height you want it */
 }
 
 .gaqqulineropenqbuttonclicked {
@@ -736,6 +827,7 @@ textarea {
     align-items: center;
     cursor: pointer;
 }
+
 .cantfindanswerbutton {
     text-transform: uppercase;
     font-size: 1rem;
@@ -754,6 +846,7 @@ textarea {
     justify-content: center;
     align-items: center;
 }
+
 .aboutusglobalwrp {
     padding-top: 120px;
     padding-bottom: 120px;
@@ -761,6 +854,7 @@ textarea {
     margin-left: auto;
     margin-right: auto;
 }
+
 .aboutusdiamond {
     width: 16px;
     height: 16px;
@@ -768,22 +862,26 @@ textarea {
     transform: rotate(45deg);
     transform-origin: center center;
 }
+
 .aboutusaboutus {
     margin-top: 48px;
 
     margin-bottom: 48px;
 }
+
 .aboutustxt {
     max-width: 1136px;
     line-height: 1.3;
     font-weight: 500;
 }
+
 .aboutusmainwrp {
     display: flex;
     gap: 152px;
     align-items: center;
     width: 1136px;
 }
+
 .aboutusbuttongetintouch {
     display: inline-block;
     text-transform: uppercase;
@@ -800,6 +898,7 @@ textarea {
     padding-right: 48px;
     cursor: pointer;
 }
+
 .aboutusrightlogowrp {
     font-size: 7.5rem;
     font-weight: 900;
@@ -813,6 +912,7 @@ textarea {
     height: 170px;
     padding-right: 24px;
 }
+
 .aboutuslogopointhider {
     width: 48px;
     height: 48px;
@@ -820,6 +920,7 @@ textarea {
     position: absolute;
     transform: translate(60px, -84px);
 }
+
 .aboutuslogodiamond {
     width: 40px;
     height: 40px;
@@ -829,6 +930,7 @@ textarea {
     top: -28px;
     transform: rotate(45deg);
 }
+
 .getintouchinsidewrp {
     width: 1136px;
 }
@@ -852,17 +954,20 @@ textarea {
     width: 656px;
     gap: 24px;
 }
+
 .getintouchtxt {
     font-size: 1rem;
     line-height: 1.3;
     font-weight: 500;
     margin-bottom: 40px;
 }
+
 .getintouchiconswrp {
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
+
 .getintouchicontitle {
     font-size: 1.25rem;
     color: #d80b65;
@@ -874,11 +979,13 @@ textarea {
     font-weight: 500;
     line-height: 1.3;
 }
+
 .getintouchbottomwrp {
     display: flex;
     width: 1136px;
     justify-content: space-between;
 }
+
 .gitrgthinptinpt {
     width: 100%;
     height: 64px;
@@ -888,6 +995,7 @@ textarea {
     font-size: 1rem;
     font-weight: 500;
 }
+
 .getitchtxt {
     line-height: 1.3;
     font-size: 1rem;
@@ -912,14 +1020,17 @@ textarea {
     white-space: pre-wrap;
     overflow-wrap: break-word;
 }
+
 .gitrinpttxt {
     margin-bottom: 4px;
 }
+
 .getintouchtickwrp {
     display: flex;
     gap: 6px;
     align-items: flex-start;
 }
+
 .gitouchsendmessagebtn {
     background: #d80b65;
     height: 64px;
@@ -934,10 +1045,12 @@ textarea {
     font-size: 16px;
     font-family: inherit;
 }
+
 .termcondtopwrp {
     display: flex;
     margin-top: 56px;
 }
+
 .termcondsspacer {
     height: 16px;
     width: 1px;
@@ -945,9 +1058,11 @@ textarea {
     margin-left: 16px;
     margin-right: 16px;
 }
+
 .termcondbottomwrp {
     margin-top: 16px;
 }
+
 .howitworksdiamond {
     width: 16px;
     height: 16px;
@@ -961,6 +1076,7 @@ textarea {
     flex-direction: column;
     align-items: center;
 }
+
 .hoitelliner {
     position: relative;
     border: 4px dashed white;
@@ -971,6 +1087,7 @@ textarea {
 
     padding-bottom: 56px;
 }
+
 .howitworksabsolutenr {
     position: absolute;
     width: 40px;
@@ -985,6 +1102,7 @@ textarea {
     justify-content: center;
     align-items: center;
 }
+
 .howitworksinsidetitle {
     text-align: center;
     color: white;
@@ -992,6 +1110,7 @@ textarea {
     font-weight: 800;
     margin-bottom: 16px;
 }
+
 .howitworkselementswrp {
     display: grid;
     grid-template-columns: repeat(auto-fill, 360px);
@@ -1026,6 +1145,7 @@ textarea {
 
     overflow: auto;
 }
+
 .quoteareaglobalwrapper,
 .heroareapostcodewarning {
     width: 100%;
@@ -1039,6 +1159,7 @@ textarea {
     justify-content: center;
     align-items: center;
 }
+
 .quoteareamiddlewrapper {
     background: white;
     padding: 56px;
@@ -1049,6 +1170,7 @@ textarea {
     padding-bottom: 0;
     align-items: center;
 }
+
 .quoteareinput {
     height: 56px;
     width: 100%;
@@ -1060,9 +1182,11 @@ textarea {
     margin-top: 32px;
     margin-bottom: 16px;
 }
+
 .quoteareaparagraph {
     line-height: 1.3;
 }
+
 .quotearequotebutton {
     background: #d80b65;
     color: white;
@@ -1072,6 +1196,7 @@ textarea {
     font-weight: 600;
     margin-bottom: 40px;
 }
+
 .quoteareaclosebutton {
     position: absolute;
     top: 16px;
@@ -1083,6 +1208,7 @@ textarea {
     align-items: center;
     cursor: pointer;
 }
+
 .quoteareaparagraphheroarea {
     margin-bottom: 40px;
     font-size: 1.5rem;
@@ -1102,6 +1228,7 @@ textarea {
     line-height: 1.3;
     position: relative;
 }
+
 .signbutton,
 .signbuttonmarked {
     border: 2px solid #d80b65;
@@ -1117,19 +1244,23 @@ textarea {
     cursor: pointer;
     font-weight: 600;
 }
+
 .signupsmalltxt {
     font-size: 0.75rem;
     margin-top: 4px;
 }
+
 .signwindowtopbtnswrp {
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 100%;
 }
+
 .signbuttonmarked {
     background: #d80b65;
     color: white;
 }
+
 .signupwrapper {
     display: flex;
     flex-direction: column;
@@ -1137,12 +1268,14 @@ textarea {
     gap: 24px;
     margin-top: 40px;
 }
+
 .signupinfoabout8symbols {
     grid-column: 1/-1;
     color: black;
     font-size: 0.75rem;
     line-height: 1.6;
 }
+
 .mobilemenuaccountbutton {
     width: 48px;
     height: 48px;
@@ -1152,6 +1285,7 @@ textarea {
     align-items: center;
     cursor: pointer;
 }
+
 .signupwrapperup {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1163,15 +1297,19 @@ textarea {
 .signupinput {
     box-sizing: border-box;
 }
+
 .signupinput:nth-child(3) {
     grid-column: 1/-1;
 }
+
 .signupinput:nth-child(4) {
     grid-column: 1/-1;
 }
+
 .signupinput:nth-child(5) {
     grid-column: 1/-1;
 }
+
 .signupfullinputs {
     height: 56px;
     width: 100%;
@@ -1203,6 +1341,7 @@ textarea {
     grid-column: 1/-1;
     margin-top: 24px;
 }
+
 .signupreferalcodetxt {
     color: #d80b65;
     font-weight: 500;
@@ -1211,6 +1350,7 @@ textarea {
     text-align: center;
     grid-column: 1/-1;
 }
+
 .closesigninwindow {
     position: absolute;
     top: 16px;
@@ -1229,6 +1369,7 @@ textarea {
     flex-direction: column;
     width: 184px;
 }
+
 .accountdropdownwrapper {
     position: absolute;
     top: 100%;
@@ -1241,6 +1382,7 @@ textarea {
     padding: 24px;
     transform: translateY(8px);
 }
+
 .acountdrpdwnlistitem {
     display: inline-block;
     white-space: nowrap;
@@ -1249,11 +1391,13 @@ textarea {
     color: #d80b65;
     cursor: pointer;
 }
+
 .accountdrpdwnsplitter {
     width: 100%;
     height: 1px;
     background: black;
 }
+
 .accountdrpdwsignout {
     font-size: 1rem;
     font-weight: 600;
@@ -1267,11 +1411,13 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     /* display: none; <- Crashes Chrome on hover */
     -webkit-appearance: none;
-    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+    margin: 0;
+    /* <-- Apparently some margin are still there even though it's hidden */
 }
 
 input[type="number"] {
-    -moz-appearance: textfield; /* Firefox */
+    -moz-appearance: textfield;
+    /* Firefox */
 }
 
 .loginerrorp,
@@ -1282,10 +1428,12 @@ input[type="number"] {
     font-size: 1.5rem;
     line-height: 1.6;
 }
+
 .loginerrorp {
     width: 100%;
     text-align: center;
 }
+
 .forgotpasslink {
     text-decoration: underline;
     cursor: pointer;
@@ -1293,6 +1441,7 @@ input[type="number"] {
     margin-top: 24px;
     font-size: 1rem;
 }
+
 .loginerrorbutton {
     width: 100%;
     background: #43184d;
@@ -1309,6 +1458,7 @@ input[type="number"] {
     margin-top: 88px;
     width: 100%;
 }
+
 /*  */
 /* 
 
@@ -1348,6 +1498,7 @@ input[type="number"] {
     width: 24px;
     background-color: #d80b65;
 }
+
 .checkmarkoff {
     background-color: transparent;
     border: 2px solid #d4d4d4;
@@ -1366,6 +1517,7 @@ input[type="number"] {
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
 }
+
 .downloadjobbutton {
     width: inherit;
     height: inherit;
@@ -1375,9 +1527,11 @@ input[type="number"] {
 
     box-sizing: border-box;
 }
+
 .termscondspan {
     cursor: pointer;
 }
+
 .showtermswrapper {
     position: fixed;
     top: 88px;
@@ -1388,6 +1542,7 @@ input[type="number"] {
     justify-content: center;
     overflow: hidden;
 }
+
 .showtermsinsidewrapper {
     background-color: white;
     margin-top: 16px;
@@ -1397,24 +1552,28 @@ input[type="number"] {
     height: calc(100vh - 88px - 64px);
     overflow: hidden;
 }
+
 .termsclosebutton {
     font-size: 1.25rem;
     cursor: pointer;
     float: right;
     font-weight: 600;
 }
+
 .termswrpclosewrp {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 24px;
 }
+
 .termswrapper {
     max-width: 80ch;
     font-size: 1rem;
     line-height: 1.4;
     padding: 24px;
 }
+
 .termsinsidtextwrp {
     display: flex;
     flex-direction: column;
@@ -1424,15 +1583,156 @@ input[type="number"] {
 
     overflow: auto;
 }
+
 .termstextblock {
     margin-right: 16px;
 }
+
 .termstexttitle {
     text-transform: uppercase;
     font-weight: bold;
     margin-bottom: 16px;
 }
+
 .br {
     display: block;
     margin-bottom: 16px;
+}
+
+
+
+
+
+.dynamicContent ul {
+    list-style-type: none;
+    margin: 0;
+}
+
+.dynamicContent ul li {
+    position: relative;
+    /* margin: 1em 0; */
+    /* font-size: 14px; */
+    /* color: #6D6D6D; */
+    padding-left: 12px;
+}
+
+.dynamicContent ul li::before {
+    /* list-style-image: url(); */
+
+    content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  transform="scale(.9)" fill="rgb(231,28,94)"><path d="m15 5-1.41 1.41L18.17 11H2v2h16.17l-4.59 4.59L15 19l7-7z"></path></svg>');
+    position: absolute;
+    fill: #d80b65 !important;
+    top: 50%;
+    left: 25px;
+    top: 1px;
+    /* height: 20px; */
+    width: 20px;
+    transform: translate(-200%, 0%);
+}
+
+.dynamicContent li {
+    padding-bottom: 1rem;
+}
+
+.dynamicContent td {
+    padding: 8px !important;
+    border-color: #000 !important;
+}
+
+@media only screen and (max-width: 575.98px) {
+    .dynamicContent td {
+        padding: 4px !important;
+        font-size: 14px !important;
+    }
+}
+
+.dynamicContent table {
+    border: 2px solid #000;
+}
+
+
+.dynamicContent table {
+    border-spacing: 0px;
+    width: 100% !important;
+    max-width: 100% !important;
+    border-width: 1px;
+}
+
+.dynamicContent td {
+    background-color: transparent !important;
+}
+
+.dynamicContent td p {
+    /* background-color: transparent !important; */
+    padding-bottom: 0 !important;
+}
+
+.dynamicContent th {
+    font-weight: bold !important;
+}
+
+.table {
+    float: none !important;
+    max-width: calc(100vw - 16px) !important;
+    /* font-size: 16px; */
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}
+
+.dynamicContent h1 {
+    padding-bottom: 2rem;
+}
+
+.dynamicContent h2 {
+    font-size: 32px;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+    color: #d80b65 !important;
+}
+
+.dynamicContent h2>span {
+    color: #d80b65 !important;
+}
+
+.dynamicContent h3 {
+    padding-bottom: 2rem;
+    padding-top: 3rem;
+}
+
+.dynamicContent h4 {
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+
+.dynamicContent p {
+    /* font-size: 16px; */
+    padding-bottom: 2rem;
+}
+
+.dynamicContent li {
+    /* font-size: 16px; */
+    margin-left: 16px;
+}
+
+.dynamicContent img {
+    /* padding-top: 18px; */
+    width: 100% !important;
+    object-fit: cover;
+    height: auto;
+}
+
+.dynamicContent a {
+    color: var(--pink_color) !important;
+    text-decoration: underline;
+}
+
+.dynamicContent a>span {
+    color: var(--pink_color) !important;
+    text-decoration: underline;
+}
+
+.dynamicContent {
+    max-width: calc(100vw - 16px) !important;
+    font-family: inherit !important;
 }

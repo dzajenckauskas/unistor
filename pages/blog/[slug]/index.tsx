@@ -1,4 +1,3 @@
-// pages/blog.tsx
 import React from 'react'
 import { ArticleResponseType } from '../../../COMPONENTS/types/ArticleTypes';
 import ArticlePage from '../../../COMPONENTS/blog/ArticlePage';
@@ -11,8 +10,6 @@ interface BlogProps {
 
 const Blog = ({ article, error }: BlogProps) => {
     if (error) return <div>Error: {error}</div>
-    console.log(article, 'articles');
-
     return (
         <ArticlePage article={article} />
     )

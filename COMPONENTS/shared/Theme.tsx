@@ -1,7 +1,11 @@
 import { createTheme } from '@mui/material/styles';
-// import { Uniform } from "next/font/google";
+import { Montserrat } from "@next/font/google";
 
-// const openSans = Open_Sans({ weight: ["300", "400", "500", "600", "700", "800"], subsets: ['latin-ext'] })
+const montserrat = Montserrat({
+    weight: ["300", "400", "500", "600", "700", "800"],
+    subsets: ['latin'],
+    display: 'swap' // Prevents font flicker
+});
 
 export const theme = createTheme({
     components: {
@@ -34,7 +38,7 @@ export const theme = createTheme({
         MuiButton: {
             styleOverrides: {
                 root: ({ theme }) => theme.unstable_sx({
-                    fontFamily: 'Uniform',
+                    fontFamily: montserrat.style.fontFamily,
                     fontSize: 14,
                     py: 1.2,
                     letterSpacing: 1,
@@ -64,10 +68,12 @@ export const theme = createTheme({
             }
         },
     },
-
+    // typography: {
+    //     fontFamily: montserrat.style.fontFamily,
+    // },
     typography: {
         h1: {
-            fontFamily: 'Uniform',
+            fontFamily: montserrat.style.fontFamily,
             fontWeight: 700,
             fontSize: 32,
             '@media (min-width:600px)': {
@@ -84,7 +90,7 @@ export const theme = createTheme({
             },
         },
         h2: {
-            fontFamily: 'Uniform',
+            fontFamily: montserrat.style.fontFamily,
             fontWeight: 700,
             fontSize: 24,
             '@media (min-width:600px)': {
@@ -101,7 +107,7 @@ export const theme = createTheme({
             },
         },
         h3: {
-            fontFamily: 'Uniform',
+            fontFamily: montserrat.style.fontFamily,
             fontWeight: 700,
             fontSize: 20,
             '@media (min-width:600px)': {
@@ -118,7 +124,7 @@ export const theme = createTheme({
             },
         },
         h4: {
-            fontFamily: 'Uniform',
+            fontFamily: montserrat.style.fontFamily,
             fontSize: 18,
             '@media (min-width:600px)': {
                 fontSize: 20,
@@ -134,14 +140,14 @@ export const theme = createTheme({
             },
         },
         h5: {
-            fontFamily: 'Uniform',
+            fontFamily: montserrat.style.fontFamily,
             fontSize: 20
         },
         h6: {
-            fontFamily: 'Uniform',
+            fontFamily: montserrat.style.fontFamily,
         },
         subtitle1: {
-            fontFamily: 'Uniform',
+            fontFamily: montserrat.style.fontFamily,
             fontSize: 18,
             '@media (min-width:600px)': {
                 fontSize: 18,
@@ -157,20 +163,20 @@ export const theme = createTheme({
             },
         },
         subtitle2: {
-            fontFamily: 'Uniform',
+            fontFamily: montserrat.style.fontFamily,
             fontSize: 18,
         },
         body1: {
-            fontFamily: 'Uniform',
+            fontFamily: montserrat.style.fontFamily,
             fontSize: 16,
 
         },
         body2: {
-            fontFamily: 'Uniform',
+            fontFamily: montserrat.style.fontFamily,
             fontSize: 14
         },
         caption: {
-            fontFamily: 'Uniform',
+            fontFamily: montserrat.style.fontFamily,
             fontSize: 12
 
         }
@@ -180,8 +186,8 @@ export const theme = createTheme({
             main: '#000'
         },
         secondary: {
-            main: '#e71c5e',
-            dark: '#ce1551'
+            main: '#d80b65',
+            dark: '#d80b65'
         },
         info: {
             main: '#fff'
@@ -192,7 +198,7 @@ export const theme = createTheme({
             disabled: '#7d7c83',
         },
         error: {
-            main: '#e71c5e',
+            main: '#d80b65',
         }
     }
 })

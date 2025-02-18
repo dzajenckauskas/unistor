@@ -28,7 +28,7 @@ const ArticleCard = ({ loading, article }: Props) => {
                 boxShadow: 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;',
                 width: '100%',
                 backgroundColor: "#fff",
-                borderRadius: '5px',
+                borderRadius: '0px',
                 overflow: 'hidden',
                 height: '100%',
             }}>
@@ -38,8 +38,8 @@ const ArticleCard = ({ loading, article }: Props) => {
                 }}>
                     <Stack sx={{
                         height: { xs: '250px', md: '250px' },
-                        borderTopRightRadius: '5px',
-                        borderTopLeftRadius: '5px',
+                        // borderTopRightRadius: '5px',
+                        // borderTopLeftRadius: '5px',
                         width: '100%',
                         alignItems: 'flex-end',
                         position: 'relative',
@@ -70,7 +70,7 @@ const ArticleCard = ({ loading, article }: Props) => {
                 </Typography> */}
                 <Link href={url} passHref aria-label={'Read more'}>
                     <Typography variant='h4' component={'h2'} sx={{
-                        py: 1,
+                        // py: 1,
                         color: theme.palette.secondary.main,
                         fontWeight: 700,
                         lineHeight: 1.2,
@@ -82,7 +82,7 @@ const ArticleCard = ({ loading, article }: Props) => {
                     </Typography>
                 </Link>
 
-                <Typography variant='body1' sx={{ pt: 1, fontWeight: 500, minHeight: { xs: '6rem', sm: '6rem', md: '10rem' }, maxHeight: '10rem', overflow: 'hidden' }}>
+                <Typography variant='body1' sx={{ pt: 1, fontWeight: 500, minHeight: { xs: '6rem', sm: '6rem', md: '11rem' }, maxHeight: '11rem', overflow: 'hidden' }}>
                     {loading ? <>
                         <Skeleton />
                         <Skeleton />

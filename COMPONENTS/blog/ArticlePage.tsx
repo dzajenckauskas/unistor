@@ -26,6 +26,7 @@ type Props = {
 const ArticlePage = ({ article }: Props) => {
     const pathname = usePathname()
     const url = process.env.NEXT_PUBLIC_DOMAIN_URL + pathname
+    console.log(url, "url");
 
     const date = article?.data?.attributes?.createdAt
 
@@ -115,7 +116,7 @@ const ArticlePage = ({ article }: Props) => {
                         width: '100%',
                         height: { xs: 300, sm: 400, md: 600 },
                         justifyContent: 'flex-end',
-                        borderRadius: '5px',
+                        // borderRadius: '5px',
                         overflow: 'hidden'
                     }}>
                         <Image

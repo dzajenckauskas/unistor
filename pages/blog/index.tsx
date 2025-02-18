@@ -1,8 +1,7 @@
-// pages/blog.tsx
 import React from 'react'
 import { ArticlesResponseType } from '../../COMPONENTS/types/ArticleTypes';
-import GuidesCategoryPage from '../../COMPONENTS/blog/GuidesCategoryPage';
 import { getData } from '../../UTILS/getData';
+import BlogPage from '../../COMPONENTS/blog/BlogPage';
 
 interface BlogProps {
     articles?: ArticlesResponseType;
@@ -11,10 +10,8 @@ interface BlogProps {
 
 const Blog = ({ articles, error }: BlogProps) => {
     if (error) return <div>Error: {error}</div>
-    console.log(articles, 'articles');
-
     return (
-        <GuidesCategoryPage articles={articles} />
+        <BlogPage articles={articles} />
     )
 }
 

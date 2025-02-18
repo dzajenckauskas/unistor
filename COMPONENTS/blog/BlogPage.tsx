@@ -1,9 +1,6 @@
-// import { MaxWidthContainer } from '@/COMPONENTS/common/MaxWidthContainer';
-// import PageLayout from '@/COMPONENTS/common/PageLayout';
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import Link from 'next/link';
 import { useState } from 'react';
 import ArticleCard from '../common/ArticleCard';
 import { MaxWidthContainer } from '../common/MaxWidthContainer';
@@ -11,13 +8,12 @@ import PageLayout from '../common/PageLayout';
 import BreadcrumbsComponent from '../shared/BreadcrumbsComponent';
 import { theme } from '../shared/Theme';
 import { ArticleDataType, ArticlesResponseType } from '../types/ArticleTypes';
-// import BreadcrumbsComponent from '@/COMPONENTS/common/shared/BreadcrumbsComponent';
 
 type Props = {
     articles?: ArticlesResponseType;
 }
 
-const GuidesCategoryPage = ({ articles }: Props) => {
+const BlogPage = ({ articles }: Props) => {
     const [active, setActive] = useState<string | undefined>('all-posts')
 
     const renderLatestArticlesLoading = Array.from({ length: 8 })?.map((_, index) => {
@@ -49,14 +45,9 @@ const GuidesCategoryPage = ({ articles }: Props) => {
                         display: 'flex', flexDirection: 'column',
                     }}>
                         <BreadcrumbsComponent>
-                            <>
-                                <Link passHref href={'/blog'}>
-                                    <Typography variant='body2' sx={{ ':hover': { textDecoration: 'underline' }, fontWeight: 500, color: theme.palette.secondary.main }}>
-                                        Blog
-                                    </Typography>
-                                </Link>
-
-                            </>
+                            <Typography variant='body2' sx={{ fontWeight: 500 }}>
+                                Blog
+                            </Typography>
                         </BreadcrumbsComponent>
                     </Stack>
                 </MaxWidthContainer>
@@ -110,4 +101,4 @@ const GuidesCategoryPage = ({ articles }: Props) => {
     )
 }
 
-export default GuidesCategoryPage
+export default BlogPage
