@@ -146,10 +146,9 @@ const ArticlePage = ({ article }: Props) => {
                                         color: '#fff', fontSize: 14, textTransform: 'uppercase',
                                         fontWeight: 500, letterSpacing: 1
                                     }}>
-                                    {/* {'category'} {'continent' && <>• {'continent'}</>} • */}
                                     {formattedDate}
                                 </Typography>
-                                <Box id="share-box" sx={{ width: '60px', height: '1px', backgroundColor: '#fff' }}></Box>
+                                <Box id="share-box" sx={{ width: '60px', height: '1px', backgroundColor: '#fff', display: { xs: 'none', md: 'flex' } }}></Box>
 
                                 <Stack direction={'row'} alignItems={'center'} spacing={2}
                                     sx={{
