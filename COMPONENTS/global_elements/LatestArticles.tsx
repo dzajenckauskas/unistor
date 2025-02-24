@@ -42,42 +42,45 @@ const LatestArticles = ({ sx, bgColor, titleColor }: Props) => {
         )
     })
     return (
-        <Stack sx={{ width: '100%', backgroundColor: bgColor ?? '#efefef', py: { xs: 6, md: 6 }, ...sx }}>
-            <MaxWidthContainer>
-                <Stack sx={{
-                    width: '100%',
-                    display: 'flex', flexDirection: 'column',
-                    mb: 4
-                }}>
-                    <Stack direction={'column'} alignItems={'center'} pt={4}>
-                        <div className="diamond"></div>
-                        <h2 className="customersrevtitle" style={{ color: titleColor ?? "#000", marginBottom: 16 }}>
-                            Latest articles
-                        </h2>
-                    </Stack>
-                    {isLoading &&
-                        <Stack direction={{ xs: 'column', md: 'row' }} spacing={2} sx={{ mt: 4, justifyContent: 'center', width: '100%' }}>
-                            {renderLatestArticlesLoading}
-                        </Stack>}
-                    {!isLoading && <Stack direction={{ xs: 'column', md: 'row' }} spacing={2} sx={{ mt: 4, justifyContent: 'center', width: '100%' }}>
-                        {renderLatestArticles}
-                    </Stack>}
-                    <Stack direction={'row'} spacing={3} sx={{ mt: 0, justifyContent: 'center', width: '100%' }}>
-                        <Grid container spacing={2} sx={{ display: 'flex', width: '100%', justifyContent: 'center' }}>
-                            <Grid item lg={4} md={4} sm={6} xs={12}>
-                                <Link aria-label="View all articles" passHref href={'/blog'} style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
-                                    <div
-                                        className="aboutusbuttongetintouch"
-                                    >
-                                        View all articles
-                                    </div>
-                                </Link>
-                            </Grid>
-                        </Grid>
-                    </Stack>
-                </Stack>
-            </MaxWidthContainer>
-        </Stack>
+        <>
+            {latestArticles?.data && latestArticles?.data?.length > 0 &&
+                <Stack sx={{ width: '100%', backgroundColor: bgColor ?? '#efefef', py: { xs: 6, md: 6 }, ...sx }}>
+                    <MaxWidthContainer>
+                        <Stack sx={{
+                            width: '100%',
+                            display: 'flex', flexDirection: 'column',
+                            mb: 4
+                        }}>
+                            <Stack direction={'column'} alignItems={'center'} pt={4}>
+                                <div className="diamond"></div>
+                                <h2 className="customersrevtitle" style={{ color: titleColor ?? "#000", marginBottom: 16 }}>
+                                    Latest articles
+                                </h2>
+                            </Stack>
+                            {isLoading &&
+                                <Stack direction={{ xs: 'column', md: 'row' }} spacing={2} sx={{ mt: 4, justifyContent: 'center', width: '100%' }}>
+                                    {renderLatestArticlesLoading}
+                                </Stack>}
+                            {!isLoading && <Stack direction={{ xs: 'column', md: 'row' }} spacing={2} sx={{ mt: 4, justifyContent: 'center', width: '100%' }}>
+                                {renderLatestArticles}
+                            </Stack>}
+                            <Stack direction={'row'} spacing={3} sx={{ mt: 0, justifyContent: 'center', width: '100%' }}>
+                                <Grid container spacing={2} sx={{ display: 'flex', width: '100%', justifyContent: 'center' }}>
+                                    <Grid item lg={4} md={4} sm={6} xs={12}>
+                                        <Link aria-label="View all articles" passHref href={'/blog'} style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
+                                            <div
+                                                className="aboutusbuttongetintouch"
+                                            >
+                                                View all articles
+                                            </div>
+                                        </Link>
+                                    </Grid>
+                                </Grid>
+                            </Stack>
+                        </Stack>
+                    </MaxWidthContainer>
+                </Stack>}
+        </>
     )
 }
 
